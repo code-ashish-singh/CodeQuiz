@@ -1,0 +1,102 @@
+[
+  {
+    "question": "JavaScript kya hai?",
+    "options": ["Programming Language", "Database", "Operating System", "Browser"],
+    "answer": "Programming Language"
+  },
+  {
+    "question": "let ka scope kya hota hai?",
+    "options": ["Global", "Block", "Function", "None"],
+    "answer": "Block"
+  },
+  {
+    "question": "const variable ko change kar sakte hain?",
+    "options": ["Yes", "No", "Kabhi-kabhi", "Depends"],
+    "answer": "No"
+  },
+  {
+    "question": "=== operator kya karta hai?",
+    "options": ["Only value compare", "Value + type compare", "Assignment", "None"],
+    "answer": "Value + type compare"
+  },
+  {
+    "question": "NaN ka matlab kya hai?",
+    "options": ["New and Null", "Not a Number", "Negative Number", "None"],
+    "answer": "Not a Number"
+  },
+  {
+    "question": "undefined kab hota hai?",
+    "options": ["Variable declare nahi hua", "Value assign nahi hui", "Null assign hua", "0 assign hua"],
+    "answer": "Value assign nahi hui"
+  },
+  {
+    "question": "null kya represent karta hai?",
+    "options": ["0", "Empty value", "Undefined", "Error"],
+    "answer": "Empty value"
+  },
+  {
+    "question": "Function kya hota hai?",
+    "options": ["Loop", "Variable", "Code block", "Object"],
+    "answer": "Code block"
+  },
+  {
+    "question": "Arrow function ka syntax kya hai?",
+    "options": ["=>", "->", "==>", "<="],
+    "answer": "=>"
+  },
+  {
+    "question": "Array me data kaise store hota hai?",
+    "options": ["Key-value", "Indexed", "Random", "Sorted"],
+    "answer": "Indexed"
+  },
+  {
+    "question": "Object kya hota hai?",
+    "options": ["List", "Key-value pair", "Loop", "Function"],
+    "answer": "Key-value pair"
+  },
+  {
+    "question": "for loop ka use kya hai?",
+    "options": ["Condition check", "Repeat code", "Store data", "Compare values"],
+    "answer": "Repeat code"
+  },
+  {
+    "question": "while loop kab chalta hai?",
+    "options": ["Condition false", "Condition true", "Always", "Never"],
+    "answer": "Condition true"
+  },
+  {
+    "question": "Event kya hai?",
+    "options": ["Error", "User action", "Variable", "Loop"],
+    "answer": "User action"
+  },
+  {
+    "question": "DOM ka full form kya hai?",
+    "options": ["Data Object Model", "Document Object Model", "Digital Output Model", "None"],
+    "answer": "Document Object Model"
+  },
+  {
+    "question": "Callback function kya hai?",
+    "options": ["Function inside loop", "Function as argument", "Function without name", "None"],
+    "answer": "Function as argument"
+  },
+  {
+    "question": "Promise kya hota hai?",
+    "options": ["Synchronous result", "Asynchronous result", "Loop", "Variable"],
+    "answer": "Asynchronous result"
+  },
+  {
+    "question": "async/await ka use kahan hota hai?",
+    "options": ["Loops", "Objects", "Async code", "Variables"],
+    "answer": "Async code"
+  },
+  {
+    "question": "Closure kya hai?",
+    "options": ["Loop", "Function with outer scope access", "Variable", "Object"],
+    "answer": "Function with outer scope access"
+  },
+  {
+    "question": "Hoisting kya hai?",
+    "options": ["Execution stop", "Move declarations to top", "Loop break", "Error handling"],
+    "answer": "Move declarations to top"
+  }
+]
