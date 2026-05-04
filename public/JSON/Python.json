@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "question": "Which keyword is used to create a function in Python?",
+    "options": ["function", "void", "def", "func"],
+    "answer": "def",
+    "explanation": "In Python, 'def' is the keyword used to define a function."
+  },
+  {
+    "id": 2,
+    "question": "What is the correct file extension for Python files?",
+    "options": [".pt", ".pyt", ".py", ".pyc"],
+    "answer": ".py",
+    "explanation": "Standard Python source files use the .py extension."
+  },
+  {
+    "id": 3,
+    "question": "How do you create a list in Python?",
+    "options": ["{}", "[]", "()", "<>"],
+    "answer": "[]",
+    "explanation": "Lists are created using square brackets. Parentheses () are for tuples, and curly braces {} are for dictionaries/sets."
+  },
+  {
+    "id": 4,
+    "question": "What is the output of 'print(2 ** 3)'?",
+    "options": ["6", "8", "9", "5"],
+    "answer": "8",
+    "explanation": "The ** operator in Python is used for exponentiation (2 to the power of 3)."
+  },
+  {
+    "id": 5,
+    "question": "Which of these is used to define a block of code in Python?",
+    "options": ["Curly braces", "Parentheses", "Indentation", "Semicolons"],
+    "answer": "Indentation",
+    "explanation": "Python uses indentation to define the scope of loops, functions, and classes, rather than braces."
+  },
+  {
+    "id": 6,
+    "question": "How do you start a comment in Python?",
+    "options": ["//", "/*", "#", "--"],
+    "answer": "#",
+    "explanation": "The hash character (#) is used to start a single-line comment in Python."
+  },
+  {
+    "id": 7,
+    "question": "Which data type is immutable?",
+    "options": ["List", "Dictionary", "Set", "Tuple"],
+    "answer": "Tuple",
+    "explanation": "Tuples are immutable, meaning their elements cannot be changed after creation."
+  },
+  {
+    "id": 8,
+    "question": "What is the result of 'type(5.5)'?",
+    "options": ["int", "float", "number", "decimal"],
+    "answer": "float",
+    "explanation": "In Python, any number with a decimal point is represented as a 'float'."
+  },
+  {
+    "id": 9,
+    "question": "How do you add an element to the end of a list?",
+    "options": ["add()", "push()", "append()", "insert()"],
+    "answer": "append()",
+    "explanation": "The append() method adds a single item to the end of an existing list."
+  },
+  {
+    "id": 10,
+    "question": "Which function returns the number of items in an object?",
+    "options": ["count()", "len()", "size()", "length()"],
+    "answer": "len()",
+    "explanation": "len() is a built-in function that returns the length (number of items) of an object."
+  },
+  {
+    "id": 11,
+    "question": "What is 'PEP 8'?",
+    "options": ["A Python compiler", "A style guide for Python code", "A library for math", "A version of Python"],
+    "answer": "A style guide for Python code",
+    "explanation": "PEP 8 provides guidelines and best practices on how to write Python code for maximum readability."
+  },
+  {
+    "id": 12,
+    "question": "Which keyword is used to handle exceptions?",
+    "options": ["catch", "except", "error", "handle"],
+    "answer": "except",
+    "explanation": "Python uses try-except blocks to handle runtime errors (exceptions)."
+  },
+  {
+    "id": 13,
+    "question": "What does the 'range(5)' function generate?",
+    "options": ["1 to 5", "0 to 5", "0 to 4", "1 to 4"],
+    "answer": "0 to 4",
+    "explanation": "range(n) generates numbers starting from 0 up to, but not including, n."
+  },
+  {
+    "id": 14,
+    "question": "Which operator is used for floor division?",
+    "options": ["/", "//", "%", "\\"],
+    "answer": "//",
+    "explanation": "The // operator divides two numbers and rounds the result down to the nearest whole number."
+  },
+  {
+    "id": 15,
+    "question": "What is a 'lambda' function?",
+    "options": ["A large function", "An anonymous one-line function", "A recursive function", "A function that returns a list"],
+    "answer": "An anonymous one-line function",
+    "explanation": "Lambda functions are small, anonymous functions defined with the lambda keyword."
+  },
+  {
+    "id": 16,
+    "question": "How do you check if 'key' exists in a dictionary 'd'?",
+    "options": ["d.contains(key)", "key in d", "d.has(key)", "exists(key, d)"],
+    "answer": "key in d",
+    "explanation": "The 'in' operator is the standard way to check for the presence of a key in a dictionary."
+  },
+  {
+    "id": 17,
+    "question": "What is the output of 'print(\"Hello\" * 3)'?",
+    "options": ["Hello3", "Error", "HelloHelloHello", "3Hello"],
+    "answer": "HelloHelloHello",
+    "explanation": "The * operator used with a string and an integer performs string repetition."
+  },
+  {
+    "id": 18,
+    "question": "Which method removes the last item from a list and returns it?",
+    "options": ["remove()", "delete()", "pop()", "discard()"],
+    "answer": "pop()",
+    "explanation": "pop() removes and returns the item at the given index (default is the last item)."
+  },
+  {
+    "id": 19,
+    "question": "What is '__init__' in Python classes?",
+    "options": ["A destructor", "A private method", "A constructor method", "A library import"],
+    "answer": "A constructor method",
+    "explanation": "__init__ is called automatically when an object of a class is instantiated."
+  },
+  {
+    "id": 20,
+    "question": "Which module is used for generating random numbers?",
+    "options": ["math", "random", "os", "sys"],
+    "answer": "random",
+    "explanation": "The random module implements pseudo-random number generators for various distributions."
+  },
+  {
+    "id": 21,
+    "question": "What is the result of 'bool(0)'?",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "False",
+    "explanation": "In Python, the integer 0 is considered Falsy."
+  },
+  {
+    "id": 22,
+    "question": "Which of the following is used to import a specific function from a module?",
+    "options": ["import function from module", "from module import function", "include module.function", "import module(function)"],
+    "answer": "from module import function",
+    "explanation": "This syntax allows you to import only specific parts of a module into the current namespace."
+  },
+  {
+    "id": 23,
+    "question": "What is a 'Docstring'?",
+    "options": ["A string used for documentation", "A string of doctors", "A string that connects modules", "A type of variable"],
+    "answer": "A string used for documentation",
+    "explanation": "Docstrings are string literals that appear right after the definition of a function, method, class, or module."
+  },
+  {
+    "id": 24,
+    "question": "Which keyword is used to return a value from a function?",
+    "options": ["back", "give", "return", "exit"],
+    "answer": "return",
+    "explanation": "The return statement is used to exit a function and go back to the place where it was called, optionally with a value."
+  },
+  {
+    "id": 25,
+    "question": "What is the purpose of the 'pass' statement?",
+    "options": ["To skip a loop iteration", "To serve as a placeholder for future code", "To exit the program", "To return a null value"],
+    "answer": "To serve as a placeholder for future code",
+    "explanation": "The pass statement is a null operation; it is used when a statement is syntactically required but you don't want to execute any code."
+  },
+  {
+    "id": 26,
+    "question": "How do you represent a set in Python?",
+    "options": ["[]", "()", "{}", "<>"],
+    "answer": "{}",
+    "explanation": "Sets are written with curly brackets, containing unique elements not in key:value pairs."
+  },
+  {
+    "id": 27,
+    "question": "What is 'List Comprehension'?",
+    "options": ["A way to explain lists", "A concise way to create lists", "A way to sort lists", "A list inside a list"],
+    "answer": "A concise way to create lists",
+    "explanation": "List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list."
+  },
+  {
+    "id": 28,
+    "question": "What does the 'is' operator check?",
+    "options": ["Equality of values", "Identity (if they are the same object)", "If a variable exists", "If a type is the same"],
+    "answer": "Identity (if they are the same object)",
+    "explanation": "The 'is' operator checks if two variables point to the same object in memory, whereas '==' checks for value equality."
+  },
+  {
+    "id": 29,
+    "question": "Which method is used to convert a string to lowercase?",
+    "options": ["lower()", "down()", "casefold()", "Both lower() and casefold()"],
+    "answer": "Both lower() and casefold()",
+    "explanation": "lower() is standard, but casefold() is stronger and more aggressive for caseless matching."
+  },
+  {
+    "id": 30,
+    "question": "What is a 'Decorator' in Python?",
+    "options": ["A tool for UI design", "A function that modifies the behavior of another function", "A way to color code", "A class attribute"],
+    "answer": "A function that modifies the behavior of another function",
+    "explanation": "Decorators allow you to wrap another function in order to extend its behavior without permanently modifying it."
+  },
+  {
+    "id": 31,
+    "question": "How do you create a dictionary in Python?",
+    "options": ["{'key': 'value'}", "['key', 'value']", "('key', 'value')", "{'key', 'value'}"],
+    "answer": "{'key': 'value'}",
+    "explanation": "Dictionaries are created using curly braces with key-value pairs separated by colons."
+  },
+  {
+    "id": 32,
+    "question": "What is the output of '10 / 2'?",
+    "options": ["5", "5.0", "2", "Error"],
+    "answer": "5.0",
+    "explanation": "In Python 3, the / operator always performs floating-point division."
+  },
+  {
+    "id": 33,
+    "question": "What is a 'Generator' in Python?",
+    "options": ["A function that yields values one by one", "A tool to generate documentation", "A hardware component", "A list that cannot be changed"],
+    "answer": "A function that yields values one by one",
+    "explanation": "Generators use the 'yield' keyword to return data lazily, saving memory."
+  },
+  {
+    "id": 34,
+    "question": "Which function is used to get input from the user?",
+    "options": ["get()", "scan()", "input()", "read()"],
+    "answer": "input()",
+    "explanation": "The input() function pauses the program and waits for the user to type something."
+  },
+  {
+    "id": 35,
+    "question": "What does 'self' represent in a class method?",
+    "options": ["The class itself", "The current instance of the object", "A global variable", "A private attribute"],
+    "answer": "The current instance of the object",
+    "explanation": "'self' is a reference to the specific object being operated on."
+  },
+  {
+    "id": 36,
+    "question": "How do you handle multiple exceptions in one except block?",
+    "options": ["except (Error1, Error2):", "except Error1 or Error2:", "except Error1, Error2:", "catch Error1, Error2:"],
+    "answer": "except (Error1, Error2):",
+    "explanation": "You can catch multiple exceptions by grouping them in a tuple."
+  },
+  {
+    "id": 37,
+    "question": "What is the result of 'None == False'?",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "False",
+    "explanation": "None is its own data type (NoneType) and is not equal to False."
+  },
+  {
+    "id": 38,
+    "question": "Which keyword is used for inheritance?",
+    "options": ["extends", "inherits", "class Child(Parent):", "using"],
+    "answer": "class Child(Parent):",
+    "explanation": "Python uses parentheses in the class definition to denote inheritance."
+  },
+  {
+    "id": 39,
+    "question": "What is 'Slicing' in Python?",
+    "options": ["Deleting parts of a file", "Extracting a part of a list or string", "A way to divide numbers", "A sorting algorithm"],
+    "answer": "Extracting a part of a list or string",
+    "explanation": "Slicing uses the [start:stop:step] syntax to extract portions of a sequence."
+  },
+  {
+    "id": 40,
+    "question": "What does the 'break' statement do?",
+    "options": ["Interrupts the computer", "Exits the current loop", "Skips an iteration", "Pauses the program"],
+    "answer": "Exits the current loop",
+    "explanation": "The break statement terminates the loop containing it."
+  },
+  {
+    "id": 41,
+    "question": "What is a 'Module' in Python?",
+    "options": ["A physical component", "A file containing Python code", "A type of loop", "A specific function"],
+    "answer": "A file containing Python code",
+    "explanation": "A module is a file consisting of Python code that can define functions, classes, and variables."
+  },
+  {
+    "id": 42,
+    "question": "Which method is used to split a string into a list?",
+    "options": ["divide()", "break()", "split()", "segment()"],
+    "answer": "split()",
+    "explanation": "The split() method breaks a string into a list based on a specified separator (default is whitespace)."
+  },
+  {
+    "id": 43,
+    "question": "What is the 'Global Interpreter Lock' (GIL)?",
+    "options": ["A security feature", "A lock that prevents multiple threads from executing Python bytecodes at once", "A way to lock files", "A database lock"],
+    "answer": "A lock that prevents multiple threads from executing Python bytecodes at once",
+    "explanation": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python code simultaneously in the standard interpreter (CPython)."
+  },
+  {
+    "id": 44,
+    "question": "What does 'join()' do?",
+    "options": ["Joins two lists", "Concatenates elements of an iterable into a string", "Merges two classes", "Connects to a database"],
+    "answer": "Concatenates elements of an iterable into a string",
+    "explanation": "join() is a string method that takes an iterable (like a list) and returns a string."
+  },
+  {
+    "id": 45,
+    "question": "What is 'Pickling'?",
+    "options": ["Cleaning the code", "Serializing and de-serializing a Python object structure", "A type of error", "Compiling Python"],
+    "answer": "Serializing and de-serializing a Python object structure",
+    "explanation": "Pickling is the process whereby a Python object hierarchy is converted into a byte stream."
+  },
+  {
+    "id": 46,
+    "question": "Which of the following is used to remove an item from a set?",
+    "options": ["pop()", "remove()", "discard()", "All of the above"],
+    "answer": "All of the above",
+    "explanation": "pop() removes an arbitrary item, remove() raises an error if item not found, discard() does not raise an error."
+  },
+  {
+    "id": 47,
+    "question": "What is the purpose of the 'with' statement?",
+    "options": ["To include a module", "To simplify exception handling by encapsulating common tasks", "To create a loop", "To define a class"],
+    "answer": "To simplify exception handling by encapsulating common tasks",
+    "explanation": "The 'with' statement is used for resource management, like automatically closing a file."
+  },
+  {
+    "id": 48,
+    "question": "What is the output of 'print(type([]))'?",
+    "options": ["<class 'list'>", "<class 'array'>", "list", "array"],
+    "answer": "<class 'list'>",
+    "explanation": "The type() function returns the class/type of the object."
+  },
+  {
+    "id": 49,
+    "question": "Which function is used to convert a string to an integer?",
+    "options": ["int()", "str()", "float()", "parse()"],
+    "answer": "int()",
+    "explanation": "The int() function converts the specified value into an integer number."
+  },
+  {
+    "id": 50,
+    "question": "What is 'Virtual Environment' in Python?",
+    "options": ["A computer simulation", "An isolated environment for Python projects", "A cloud platform", "A type of IDE"],
+    "answer": "An isolated environment for Python projects",
+    "explanation": "Virtual environments allow you to manage dependencies separately for different projects."
+  }
+]

@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "question": "Which keyword is used to define a variable that cannot be reassigned?",
+    "options": ["var", "let", "const", "static"],
+    "answer": "const",
+    "explanation": "The 'const' keyword creates a read-only reference to a value. However, if the value is an object or array, its properties can still be modified."
+  },
+  {
+    "id": 2,
+    "question": "What is the output of 'typeof null' in JavaScript?",
+    "options": ["null", "undefined", "object", "string"],
+    "answer": "object",
+    "explanation": "This is a well-known bug in the original JavaScript implementation where null was treated as an object reference."
+  },
+  {
+    "id": 3,
+    "question": "Which method is used to add an element to the end of an array?",
+    "options": ["push()", "pop()", "shift()", "unshift()"],
+    "answer": "push()",
+    "explanation": "The push() method adds one or more elements to the end of an array and returns the new length."
+  },
+  {
+    "id": 4,
+    "question": "What is the result of '2' + 2 in JavaScript?",
+    "options": ["4", "22", "NaN", "Error"],
+    "answer": "22",
+    "explanation": "JavaScript performs string concatenation when one of the operands is a string."
+  },
+  {
+    "id": 5,
+    "question": "Which of these is NOT a primitive data type in JavaScript?",
+    "options": ["String", "Boolean", "Symbol", "Array"],
+    "answer": "Array",
+    "explanation": "Arrays are a specialized type of Object, which is a reference type, not a primitive."
+  },
+  {
+    "id": 6,
+    "question": "What does '===' operator check?",
+    "options": ["Value only", "Type only", "Both value and type", "None of the above"],
+    "answer": "Both value and type",
+    "explanation": "The strict equality operator (===) checks both the equality of the value and the data type."
+  },
+  {
+    "id": 7,
+    "question": "What is the purpose of 'use strict'?",
+    "options": ["To use latest ES version", "To enable strict mode and catch common coding errors", "To make code faster", "To ignore errors"],
+    "answer": "To enable strict mode and catch common coding errors",
+    "explanation": "Strict mode catches 'silent errors' and prevents certain actions like using undeclared variables."
+  },
+  {
+    "id": 8,
+    "question": "Which function is used to parse a string into an integer?",
+    "options": ["Integer.parse()", "parseInt()", "parse()", "Number.int()"],
+    "answer": "parseInt()",
+    "explanation": "parseInt() parses a string argument and returns an integer of the specified radix."
+  },
+  {
+    "id": 9,
+    "question": "What is 'hoisting' in JavaScript?",
+    "options": ["Lifting an array", "Moving declarations to the top of the scope", "A way to loop", "Deleting variables"],
+    "answer": "Moving declarations to the top of the scope",
+    "explanation": "Hoisting is the default behavior of moving variable and function declarations to the top of their containing scope before code execution."
+  },
+  {
+    "id": 10,
+    "question": "Which of the following is used for a multi-line comment?",
+    "options": ["//", "/* */", "<!-- -->", "##"],
+    "answer": "/* */",
+    "explanation": "JavaScript uses forward slash and asterisk for block/multi-line comments."
+  },
+  {
+    "id": 11,
+    "question": "What is the output of 'Boolean('')'?",
+    "options": ["true", "false", "undefined", "NaN"],
+    "answer": "false",
+    "explanation": "An empty string is a 'falsy' value in JavaScript."
+  },
+  {
+    "id": 12,
+    "question": "How do you check the length of a string named 'str'?",
+    "options": ["str.length()", "str.size", "str.count", "str.length"],
+    "answer": "str.length",
+    "explanation": "The length property returns the number of characters in a string."
+  },
+  {
+    "id": 13,
+    "question": "Which method merges two or more arrays?",
+    "options": ["concat()", "join()", "merge()", "combine()"],
+    "answer": "concat()",
+    "explanation": "The concat() method is used to merge two or more arrays without changing the existing arrays."
+  },
+  {
+    "id": 14,
+    "question": "What is an 'IIFE'?",
+    "options": ["Internal Interface for Elements", "Immediately Invoked Function Expression", "Instant Iteration Functional Engine", "None"],
+    "answer": "Immediately Invoked Function Expression",
+    "explanation": "An IIFE is a function that runs as soon as it is defined."
+  },
+  {
+    "id": 15,
+    "question": "Which operator is used to check if a property exists in an object?",
+    "options": ["exists", "has", "in", "within"],
+    "answer": "in",
+    "explanation": "The 'in' operator returns true if the specified property is in the specified object or its prototype chain."
+  },
+  {
+    "id": 16,
+    "question": "What does the 'bind' method do?",
+    "options": ["Executes a function immediately", "Creates a new function with a specific 'this' value", "Combines two objects", "Loops through an array"],
+    "answer": "Creates a new function with a specific 'this' value",
+    "explanation": "The bind() method creates a new function that, when called, has its 'this' keyword set to the provided value."
+  },
+  {
+    "id": 17,
+    "question": "What is the result of 'NaN == NaN'?",
+    "options": ["true", "false", "TypeError", "undefined"],
+    "answer": "false",
+    "explanation": "NaN (Not-a-Number) is the only value in JavaScript that is not equal to itself."
+  },
+  {
+    "id": 18,
+    "question": "Which method removes the first element from an array?",
+    "options": ["pop()", "shift()", "slice()", "splice()"],
+    "answer": "shift()",
+    "explanation": "The shift() method removes the first element from an array and returns that removed element."
+  },
+  {
+    "id": 19,
+    "question": "How can you convert a JSON string into a JavaScript object?",
+    "options": ["JSON.stringify()", "JSON.parse()", "JSON.toObject()", "Object.parse()"],
+    "answer": "JSON.parse()",
+    "explanation": "JSON.parse() takes a JSON string and transforms it into a JavaScript object."
+  },
+  {
+    "id": 20,
+    "question": "What is the global object in a browser environment?",
+    "options": ["global", "document", "window", "root"],
+    "answer": "window",
+    "explanation": "In a web browser, the window object represents the browser window and serves as the global object."
+  },
+  {
+    "id": 21,
+    "question": "Which statement is used to handle errors in JavaScript?",
+    "options": ["catch-throw", "try-catch", "error-handle", "check-fail"],
+    "answer": "try-catch",
+    "explanation": "The try-catch statement marks a block of statements to try and specifies a response should an exception be thrown."
+  },
+  {
+    "id": 22,
+    "question": "What is a closure?",
+    "options": ["A way to close the browser", "A function with access to its outer scope", "A private variable", "A loop termination"],
+    "answer": "A function with access to its outer scope",
+    "explanation": "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment)."
+  },
+  {
+    "id": 23,
+    "question": "What does 'map()' return?",
+    "options": ["The same array", "A single value", "A new array with transformed elements", "Nothing"],
+    "answer": "A new array with transformed elements",
+    "explanation": "The map() method creates a new array populated with the results of calling a provided function on every element in the calling array."
+  },
+  {
+    "id": 24,
+    "question": "How do you find the minimum of x and y?",
+    "options": ["Math.min(x, y)", "Math.lowest(x, y)", "min(x, y)", "Math.small(x, y)"],
+    "answer": "Math.min(x, y)",
+    "explanation": "Math.min() is a built-in function that returns the lowest-valued number passed into it."
+  },
+  {
+    "id": 25,
+    "question": "What is the purpose of the 'break' statement?",
+    "options": ["To skip one iteration", "To exit a loop or switch", "To stop the whole program", "To restart a function"],
+    "answer": "To exit a loop or switch",
+    "explanation": "The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement."
+  },
+  {
+    "id": 26,
+    "question": "Which keyword is used to inherit a class?",
+    "options": ["implements", "inherits", "extends", "prototype"],
+    "answer": "extends",
+    "explanation": "The extends keyword is used in class declarations or class expressions to create a class that is a child of another class."
+  },
+  {
+    "id": 27,
+    "question": "What is 'undefined' in JavaScript?",
+    "options": ["A variable that has been declared but not assigned a value", "A syntax error", "An empty object", "A null value"],
+    "answer": "A variable that has been declared but not assigned a value",
+    "explanation": "A variable that has not been assigned a value is of type undefined."
+  },
+  {
+    "id": 28,
+    "question": "Which method is used to check if an array includes a certain value?",
+    "options": ["contains()", "exists()", "includes()", "has()"],
+    "answer": "includes()",
+    "explanation": "The includes() method determines whether an array includes a certain value among its entries, returning true or false."
+  },
+  {
+    "id": 29,
+    "question": "What is the 'Spread Operator'?",
+    "options": ["...", "---", "===", ">>>"],
+    "answer": "...",
+    "explanation": "The spread operator (...) allows an iterable to be expanded in places where zero or more arguments or elements are expected."
+  },
+  {
+    "id": 30,
+    "question": "What does 'this' refer to in a regular function?",
+    "options": ["The function itself", "The global object (in non-strict mode)", "The previous function", "Nothing"],
+    "answer": "The global object (in non-strict mode)",
+    "explanation": "In a regular function call, 'this' defaults to the global object (window in browsers)."
+  },
+  {
+    "id": 31,
+    "question": "What is the output of '1' == 1?",
+    "options": ["true", "false", "undefined", "NaN"],
+    "answer": "true",
+    "explanation": "The loose equality operator (==) performs type coercion, converting the string '1' to a number."
+  },
+  {
+    "id": 32,
+    "question": "Which event occurs when a user clicks on an HTML element?",
+    "options": ["onchange", "onmouseover", "onclick", "onmouseclick"],
+    "answer": "onclick",
+    "explanation": "The onclick event is triggered when the user clicks on an element."
+  },
+  {
+    "id": 33,
+    "question": "Which of the following is used to define a function as asynchronous?",
+    "options": ["wait", "async", "promise", "defer"],
+    "answer": "async",
+    "explanation": "The async keyword is used to define an asynchronous function, which returns a Promise."
+  },
+  {
+    "id": 34,
+    "question": "What does 'Array.isArray([1, 2, 3])' return?",
+    "options": ["true", "false", "object", "undefined"],
+    "answer": "true",
+    "explanation": "The Array.isArray() method determines whether the passed value is an Array."
+  },
+  {
+    "id": 35,
+    "question": "Which method returns the index of the first occurrence of a value in an array?",
+    "options": ["search()", "getIndex()", "indexOf()", "locate()"],
+    "answer": "indexOf()",
+    "explanation": "The indexOf() method returns the first index at which a given element can be found in the array."
+  },
+  {
+    "id": 36,
+    "question": "What is a 'Promise' in JavaScript?",
+    "options": ["A guaranteed value", "A placeholder for a future value", "A way to link two variables", "A type of loop"],
+    "answer": "A placeholder for a future value",
+    "explanation": "A Promise is an object representing the eventual completion or failure of an asynchronous operation."
+  },
+  {
+    "id": 37,
+    "question": "What does 'setTimeout()' do?",
+    "options": ["Runs code forever", "Runs code after a delay", "Repeats code at intervals", "Stops code execution"],
+    "answer": "Runs code after a delay",
+    "explanation": "The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds."
+  },
+  {
+    "id": 38,
+    "question": "Which of the following is a way to create an object?",
+    "options": ["{}", "new Object()", "Object.create()", "All of the above"],
+    "answer": "All of the above",
+    "explanation": "Objects can be created using literal notation, the constructor, or the create method."
+  },
+  {
+    "id": 39,
+    "question": "What is the purpose of 'template literals'?",
+    "options": ["To create templates for CSS", "To allow embedded expressions and multi-line strings", "To speed up strings", "To hide code"],
+    "answer": "To allow embedded expressions and multi-line strings",
+    "explanation": "Template literals (using backticks) allow for string interpolation and multi-line formatting."
+  },
+  {
+    "id": 40,
+    "question": "What is the output of 'typeof NaN'?",
+    "options": ["NaN", "number", "undefined", "object"],
+    "answer": "number",
+    "explanation": "Despite being 'Not-a-Number', its technical type in JavaScript is 'number'."
+  },
+  {
+    "id": 41,
+    "question": "Which method converts an object to a JSON string?",
+    "options": ["JSON.toString()", "JSON.stringify()", "JSON.parse()", "Object.toJSON()"],
+    "answer": "JSON.stringify()",
+    "explanation": "JSON.stringify() converts a JavaScript object or value to a JSON string."
+  },
+  {
+    "id": 42,
+    "question": "What is 'callback hell'?",
+    "options": ["A fast way to write code", "Deeply nested callbacks making code hard to read", "A syntax error", "A way to loop"],
+    "answer": "Deeply nested callbacks making code hard to read",
+    "explanation": "Callback hell refers to the situation where multiple nested callbacks make the code difficult to maintain and debug."
+  },
+  {
+    "id": 43,
+    "question": "Which operator is used to check for nullish values (null or undefined) only?",
+    "options": ["||", "&&", "??", "!!"],
+    "answer": "??",
+    "explanation": "The nullish coalescing operator (??) returns the right-hand operand when the left is null or undefined."
+  },
+  {
+    "id": 44,
+    "question": "What is the 'Event Loop'?",
+    "options": ["A loop for events", "A mechanism that handles asynchronous callbacks", "A way to repeat clicks", "A CSS animation"],
+    "answer": "A mechanism that handles asynchronous callbacks",
+    "explanation": "The Event Loop is responsible for executing the code, collecting and processing events, and executing queued sub-tasks."
+  },
+  {
+    "id": 45,
+    "question": "Which method creates a shallow copy of a portion of an array?",
+    "options": ["splice()", "slice()", "copy()", "cut()"],
+    "answer": "slice()",
+    "explanation": "The slice() method returns a shallow copy of a portion of an array into a new array object."
+  },
+  {
+    "id": 46,
+    "question": "How do you declare an arrow function?",
+    "options": ["function => {}", "() => {}", "=> ()", "arrow function()"],
+    "answer": "() => {}",
+    "explanation": "Arrow functions provide a shorthand syntax using the 'fat arrow' (=>) notation."
+  },
+  {
+    "id": 47,
+    "question": "What is the output of '3 > 2 > 1'?",
+    "options": ["true", "false", "NaN", "TypeError"],
+    "answer": "false",
+    "explanation": "It evaluates (3 > 2) which is true. Then (true > 1) is false because true is coerced to 1, and 1 is not greater than 1."
+  },
+  {
+    "id": 48,
+    "question": "What is 'localStorage'?",
+    "options": ["Storage on a server", "Temporary storage that clears on refresh", "Persistent storage in the browser", "A database in the cloud"],
+    "answer": "Persistent storage in the browser",
+    "explanation": "localStorage allows you to store data across browser sessions with no expiration date."
+  },
+  {
+    "id": 49,
+    "question": "Which method removes all elements from an array?",
+    "options": ["clear()", "empty()", "arr.length = 0", "reset()"],
+    "answer": "arr.length = 0",
+    "explanation": "Setting the length property of an array to 0 is the fastest way to empty it."
+  },
+  {
+    "id": 50,
+    "question": "What is a 'Transpiler' like Babel used for?",
+    "options": ["To run JS on a server", "To convert modern JS into older versions for compatibility", "To compress images", "To style HTML"],
+    "answer": "To convert modern JS into older versions for compatibility",
+    "explanation": "Babel is a tool that converts ES6+ code into a backwards-compatible version of JavaScript that older browsers can understand."
+  }
+]

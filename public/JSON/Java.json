@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "question": "What is the correct way to declare a variable in Java?",
+    "options": ["int x = 5;", "x = 5;", "variable x = 5;", "num x = 5;"],
+    "answer": "int x = 5;",
+    "explanation": "Java is a strongly typed language, so you must specify the data type before the variable name."
+  },
+  {
+    "id": 2,
+    "question": "Which component is responsible for running Java bytecode?",
+    "options": ["JDK", "JRE", "JVM", "JIT"],
+    "answer": "JVM",
+    "explanation": "The Java Virtual Machine (JVM) provides an environment in which Java bytecode can be executed."
+  },
+  {
+    "id": 3,
+    "question": "What is the default value of a boolean variable in Java?",
+    "options": ["true", "false", "0", "null"],
+    "answer": "false",
+    "explanation": "In Java, the default value of a boolean primitive is false."
+  },
+  {
+    "id": 4,
+    "question": "Which keyword is used to create a subclass in Java?",
+    "options": ["extends", "implements", "inherits", "sub"],
+    "answer": "extends",
+    "explanation": "The 'extends' keyword is used to indicate that a class is derived from another class."
+  },
+  {
+    "id": 5,
+    "question": "What is the size of an 'int' data type in Java?",
+    "options": ["8-bit", "16-bit", "32-bit", "64-bit"],
+    "answer": "32-bit",
+    "explanation": "In Java, the int data type is a 32-bit signed two's complement integer."
+  },
+  {
+    "id": 6,
+    "question": "Which of these is NOT a pillar of OOP?",
+    "options": ["Encapsulation", "Polymorphism", "Compilation", "Abstraction"],
+    "answer": "Compilation",
+    "explanation": "The four pillars of OOP are Abstraction, Encapsulation, Inheritance, and Polymorphism."
+  },
+  {
+    "id": 7,
+    "question": "Which method is the entry point for any Java program?",
+    "options": ["start()", "init()", "main()", "run()"],
+    "answer": "main()",
+    "explanation": "The public static void main(String[] args) method is the starting point for Java applications."
+  },
+  {
+    "id": 8,
+    "question": "How do you find the length of a string 'str' in Java?",
+    "options": ["str.length", "str.size()", "str.length()", "str.count()"],
+    "answer": "str.length()",
+    "explanation": "For strings, length() is a method, whereas for arrays, length is a property."
+  },
+  {
+    "id": 9,
+    "question": "Which keyword is used to prevent a variable from being modified?",
+    "options": ["static", "final", "constant", "fixed"],
+    "answer": "final",
+    "explanation": "A final variable's value cannot be changed once it is assigned."
+  },
+  {
+    "id": 10,
+    "question": "What is the base class for all classes in Java?",
+    "options": ["Java", "Main", "Object", "Base"],
+    "answer": "Object",
+    "explanation": "Every class in Java directly or indirectly inherits from the java.lang.Object class."
+  },
+  {
+    "id": 11,
+    "question": "Which operator is used to compare two objects for equality in value?",
+    "options": ["==", "===", ".equals()", "compare()"],
+    "answer": ".equals()",
+    "explanation": "The '==' operator compares memory addresses, while '.equals()' compares the actual content."
+  },
+  {
+    "id": 12,
+    "question": "Which memory area in JVM stores objects?",
+    "options": ["Stack", "Heap", "Method Area", "PC Register"],
+    "answer": "Heap",
+    "explanation": "All objects and their corresponding instance variables are stored in the Heap memory."
+  },
+  {
+    "id": 13,
+    "question": "What is 'Method Overloading'?",
+    "options": ["Multiple methods with same name but different parameters", "Multiple methods with same name and same parameters", "Changing method implementation in subclass", "None of the above"],
+    "answer": "Multiple methods with same name but different parameters",
+    "explanation": "Method overloading is a compile-time polymorphism where methods have the same name but different signatures."
+  },
+  {
+    "id": 14,
+    "question": "Which keyword is used to call the constructor of the parent class?",
+    "options": ["this", "parent", "super", "base"],
+    "answer": "super",
+    "explanation": "The 'super' keyword is used to refer to immediate parent class objects or constructors."
+  },
+  {
+    "id": 15,
+    "question": "Which of these is a Checked Exception?",
+    "options": ["NullPointerException", "ArithmeticException", "IOException", "ArrayIndexOutOfBoundsException"],
+    "answer": "IOException",
+    "explanation": "Checked exceptions are checked at compile-time. Runtime exceptions (like NullPointerException) are unchecked."
+  },
+  {
+    "id": 16,
+    "question": "Which collection allows unique elements only?",
+    "options": ["List", "Set", "Map", "Queue"],
+    "answer": "Set",
+    "explanation": "A Set is a collection that contains no duplicate elements."
+  },
+  {
+    "id": 17,
+    "question": "Which keyword is used to define an interface?",
+    "options": ["interface", "abstract", "implements", "contract"],
+    "answer": "interface",
+    "explanation": "The 'interface' keyword is used to declare a completely abstract class that contains only abstract methods."
+  },
+  {
+    "id": 18,
+    "question": "What is the purpose of the 'static' keyword?",
+    "options": ["To create an object", "To make a member belong to the class rather than an instance", "To hide a variable", "To speed up execution"],
+    "answer": "To make a member belong to the class rather than an instance",
+    "explanation": "Static members can be accessed without creating an object of the class."
+  },
+  {
+    "id": 19,
+    "question": "Which block is always executed whether an exception is handled or not?",
+    "options": ["try", "catch", "finally", "throw"],
+    "answer": "finally",
+    "explanation": "The finally block is used for important code like closing connections or file streams."
+  },
+  {
+    "id": 20,
+    "question": "What is 'Autoboxing'?",
+    "options": ["Automatic conversion of primitive to wrapper class", "Automatic conversion of subclass to superclass", "Automatic memory management", "None of the above"],
+    "answer": "Automatic conversion of primitive to wrapper class",
+    "explanation": "Example: Converting an 'int' to an 'Integer' object automatically."
+  },
+  {
+    "id": 21,
+    "question": "Which of these is a thread-safe collection?",
+    "options": ["ArrayList", "HashMap", "Vector", "HashSet"],
+    "answer": "Vector",
+    "explanation": "Vector is synchronized, making it thread-safe, unlike ArrayList."
+  },
+  {
+    "id": 22,
+    "question": "What does 'JRE' stand for?",
+    "options": ["Java Real Environment", "Java Runtime Environment", "Java Reset Engine", "Java Reliable Edition"],
+    "answer": "Java Runtime Environment",
+    "explanation": "JRE provides the libraries and JVM required to run Java applications."
+  },
+  {
+    "id": 23,
+    "question": "Which access modifier offers the least visibility?",
+    "options": ["public", "protected", "default", "private"],
+    "answer": "private",
+    "explanation": "Private members are only accessible within the class they are declared."
+  },
+  {
+    "id": 24,
+    "question": "What is a 'Constructor' in Java?",
+    "options": ["A method to destroy objects", "A block of code to initialize objects", "A type of variable", "A keyword"],
+    "answer": "A block of code to initialize objects",
+    "explanation": "Constructors are called when an instance of a class is created."
+  },
+  {
+    "id": 25,
+    "question": "Can an interface have a constructor?",
+    "options": ["Yes", "No", "Only if it is public", "Only in Java 8+"],
+    "answer": "No",
+    "explanation": "Interfaces cannot be instantiated, so they do not have constructors."
+  },
+  {
+    "id": 26,
+    "question": "Which package is imported by default in every Java program?",
+    "options": ["java.util", "java.io", "java.lang", "java.net"],
+    "answer": "java.lang",
+    "explanation": "java.lang contains fundamental classes like String, Math, and Object."
+  },
+  {
+    "id": 27,
+    "question": "Which method is used to start a Thread in Java?",
+    "options": ["run()", "init()", "start()", "execute()"],
+    "answer": "start()",
+    "explanation": "Calling start() creates a new thread and then calls the run() method."
+  },
+  {
+    "id": 28,
+    "question": "What is 'Garbage Collection'?",
+    "options": ["Deleting source code", "Automatic memory management to reclaim unused memory", "Manual deletion of objects", "A way to handle errors"],
+    "answer": "Automatic memory management to reclaim unused memory",
+    "explanation": "The JVM automatically identifies and deletes objects that are no longer reachable."
+  },
+  {
+    "id": 29,
+    "question": "Which of these is NOT a primitive data type?",
+    "options": ["byte", "short", "String", "boolean"],
+    "answer": "String",
+    "explanation": "String is a class (Reference type), not a primitive type."
+  },
+  {
+    "id": 30,
+    "question": "What is 'Type Casting' in Java?",
+    "options": ["Changing variable names", "Assigning a value of one primitive data type to another type", "Deleting a variable", "Encrypting data"],
+    "answer": "Assigning a value of one primitive data type to another type",
+    "explanation": "There are two types: Widening (automatic) and Narrowing (manual)."
+  },
+  {
+    "id": 31,
+    "question": "Which keyword is used to inherit an interface?",
+    "options": ["extends", "inherits", "implements", "using"],
+    "answer": "implements",
+    "explanation": "A class 'implements' an interface to provide bodies for its abstract methods."
+  },
+  {
+    "id": 32,
+    "question": "What is an 'Abstract Class'?",
+    "options": ["A class that cannot be instantiated", "A class with only static methods", "A class that has no methods", "A class used for math only"],
+    "answer": "A class that cannot be instantiated",
+    "explanation": "Abstract classes are used to provide a base for subclasses to extend."
+  },
+  {
+    "id": 33,
+    "question": "What is the result of 9 / 2 in Java (integer division)?",
+    "options": ["4.5", "4", "5", "Error"],
+    "answer": "4",
+    "explanation": "Integer division truncates the decimal part."
+  },
+  {
+    "id": 34,
+    "question": "Which of these is used for multi-way branching?",
+    "options": ["if-else", "switch", "while", "for"],
+    "answer": "switch",
+    "explanation": "The switch statement allows a variable to be tested for equality against a list of values."
+  },
+  {
+    "id": 35,
+    "question": "How do you create an array of 5 integers?",
+    "options": ["int arr = new int(5);", "int[] arr = new int[5];", "int arr[5];", "Array arr = new Array(5);"],
+    "answer": "int[] arr = new int[5];",
+    "explanation": "This is the standard syntax for array instantiation in Java."
+  },
+  {
+    "id": 36,
+    "question": "What is the 'this' keyword used for?",
+    "options": ["To refer to the current class instance", "To call the parent class", "To stop a loop", "To create a new object"],
+    "answer": "To refer to the current class instance",
+    "explanation": "'this' is a reference variable that refers to the current object."
+  },
+  {
+    "id": 37,
+    "question": "Which keyword is used to throw an exception manually?",
+    "options": ["throws", "throw", "exception", "catch"],
+    "answer": "throw",
+    "explanation": "'throw' is used to throw an instance of an exception. 'throws' is used in method signatures."
+  },
+  {
+    "id": 38,
+    "question": "Which class is used to read input from the console?",
+    "options": ["System.in", "Scanner", "Printer", "InputReader"],
+    "answer": "Scanner",
+    "explanation": "java.util.Scanner is commonly used to get user input."
+  },
+  {
+    "id": 39,
+    "question": "Are strings in Java mutable?",
+    "options": ["Yes", "No", "Only if declared as final", "Only in older versions"],
+    "answer": "No",
+    "explanation": "Strings in Java are immutable; once created, their values cannot be changed."
+  },
+  {
+    "id": 40,
+    "question": "Which collection uses a key-value pair system?",
+    "options": ["ArrayList", "HashSet", "HashMap", "LinkedList"],
+    "answer": "HashMap",
+    "explanation": "Map interface implementations store data in key-value pairs."
+  },
+  {
+    "id": 41,
+    "question": "What is 'Polymorphism'?",
+    "options": ["Hiding data", "Ability of an object to take many forms", "Creating multiple objects", "Speeding up the program"],
+    "answer": "Ability of an object to take many forms",
+    "explanation": "It occurs when a parent class reference is used to refer to a child class object."
+  },
+  {
+    "id": 42,
+    "question": "Which keyword is used to import a package?",
+    "options": ["using", "include", "import", "package"],
+    "answer": "import",
+    "explanation": "The import keyword is used to make classes from other packages available."
+  },
+  {
+    "id": 43,
+    "question": "What is the 'JIT' compiler?",
+    "options": ["Just In Time", "Java Integrated Tool", "Join In Thread", "Junior Interface Tool"],
+    "answer": "Just In Time",
+    "explanation": "JIT improves performance by compiling bytecode into native machine code at runtime."
+  },
+  {
+    "id": 44,
+    "question": "Which of these is used to exit a loop prematurely?",
+    "options": ["stop", "exit", "break", "continue"],
+    "answer": "break",
+    "explanation": "'break' exits the loop, while 'continue' skips the current iteration."
+  },
+  {
+    "id": 45,
+    "question": "What is the superclass of Error and Exception classes?",
+    "options": ["Object", "Throwable", "Main", "BaseException"],
+    "answer": "Throwable",
+    "explanation": "The Throwable class is the root class of the Java Exception hierarchy."
+  },
+  {
+    "id": 46,
+    "question": "What is a 'Wrapper Class'?",
+    "options": ["A class that wraps an object", "A class that converts primitives into objects", "A security class", "A class for file handling"],
+    "answer": "A class that converts primitives into objects",
+    "explanation": "Examples include Integer, Double, Boolean, etc."
+  },
+  {
+    "id": 47,
+    "question": "Can a Java class extend more than one class?",
+    "options": ["Yes", "No", "Only if they are abstract", "Only in Java 17+"],
+    "answer": "No",
+    "explanation": "Java does not support multiple inheritance with classes to avoid the diamond problem."
+  },
+  {
+    "id": 48,
+    "question": "Which method is used to compare two strings alphabetically?",
+    "options": ["equals()", "compareTo()", "compare()", "=="],
+    "answer": "compareTo()",
+    "explanation": "compareTo() returns an integer representing the lexicographical difference."
+  },
+  {
+    "id": 49,
+    "question": "What is 'Encapsulation'?",
+    "options": ["Hiding complexity and showing functionality", "Wrapping data and code into a single unit", "Creating multiple forms of a method", "None of the above"],
+    "answer": "Wrapping data and code into a single unit",
+    "explanation": "It is achieved by making fields private and providing public getter/setter methods."
+  },
+  {
+    "id": 50,
+    "question": "What is 'Deadlock' in multithreading?",
+    "options": ["When a thread finishes execution", "When two threads are waiting for each other forever", "When the CPU stops working", "When an exception occurs"],
+    "answer": "When two threads are waiting for each other forever",
+    "explanation": "Deadlock occurs when two or more threads are blocked forever, each waiting for the other."
+  }
+]

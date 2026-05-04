@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "question": "What does CSS stand for?",
+    "options": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+    "answer": "Cascading Style Sheets",
+    "explanation": "CSS describes how HTML elements are to be displayed on screen, paper, or in other media."
+  },
+  {
+    "id": 2,
+    "question": "Which HTML tag is used to define an internal style sheet?",
+    "options": ["<script>", "<css>", "<style>", "<link>"],
+    "answer": "<style>",
+    "explanation": "Internal styles are defined within the <style> element, inside the <head> section of an HTML page."
+  },
+  {
+    "id": 3,
+    "question": "Which property is used to change the background color?",
+    "options": ["color", "bgcolor", "background-color", "fill"],
+    "answer": "background-color",
+    "explanation": "The background-color property sets the background color of an element."
+  },
+  {
+    "id": 4,
+    "question": "How do you add a background color for all <h1> elements?",
+    "options": ["h1 {background-color: #FFFFFF;}", "h1.all {background-color: #FFFFFF;}", "all.h1 {background-color: #FFFFFF;}", "h1 {bg-color: #FFFFFF;}"],
+    "answer": "h1 {background-color: #FFFFFF;}",
+    "explanation": "To style all elements of a certain type, you use the element selector (h1) followed by the declaration block."
+  },
+  {
+    "id": 5,
+    "question": "Which CSS property is used to change the text color of an element?",
+    "options": ["font-color", "text-color", "color", "foreground-color"],
+    "answer": "color",
+    "explanation": "The color property specifies the color of text."
+  },
+  {
+    "id": 6,
+    "question": "Which CSS property controls the text size?",
+    "options": ["font-style", "text-size", "font-size", "text-style"],
+    "answer": "font-size",
+    "explanation": "The font-size property sets the size of the font."
+  },
+  {
+    "id": 7,
+    "question": "What is the correct CSS syntax for making all the <p> elements bold?",
+    "options": ["p {font-weight: bold;}", "p {text-size: bold;}", "<p style='font-size: bold;'>", "p {font-style: bold;}"],
+    "answer": "p {font-weight: bold;}",
+    "explanation": "The font-weight property sets how thick or thin characters in text should be displayed."
+  },
+  {
+    "id": 8,
+    "question": "How do you display hyperlinks without an underline?",
+    "options": ["a {text-decoration: none;}", "a {underline: none;}", "a {text-style: no-underline;}", "a {decoration: no-underline;}"],
+    "answer": "a {text-decoration: none;}",
+    "explanation": "The text-decoration property is mostly used to remove underlines from links."
+  },
+  {
+    "id": 9,
+    "question": "Which property is used to change the font of an element?",
+    "options": ["font-family", "font-weight", "font-style", "font-type"],
+    "answer": "font-family",
+    "explanation": "The font-family property specifies the font for an element."
+  },
+  {
+    "id": 10,
+    "question": "How do you make the text italic?",
+    "options": ["font: italic;", "font-style: italic;", "text-style: italic;", "font-weight: italic;"],
+    "answer": "font-style: italic;",
+    "explanation": "The font-style property is used to specify italic text."
+  },
+  {
+    "id": 11,
+    "question": "Which property is used to create space around elements, outside of any defined borders?",
+    "options": ["padding", "spacing", "margin", "border-spacing"],
+    "answer": "margin",
+    "explanation": "Margins are used to create space around elements, outside of any defined borders."
+  },
+  {
+    "id": 12,
+    "question": "Which property is used to create space between the element content and the element border?",
+    "options": ["margin", "padding", "spacing", "inner-margin"],
+    "answer": "padding",
+    "explanation": "Padding is used to create space around an element's content, inside of any defined borders."
+  },
+  {
+    "id": 13,
+    "question": "How do you select an element with id 'demo'?",
+    "options": [".demo", "demo", "#demo", "*demo"],
+    "answer": "#demo",
+    "explanation": "The # selector is used to select an element with a specific id."
+  },
+  {
+    "id": 14,
+    "question": "How do you select elements with a class name 'test'?",
+    "options": ["#test", ".test", "test", "*test"],
+    "answer": ".test",
+    "explanation": "The period (.) selector is used to select elements with a specific class."
+  },
+  {
+    "id": 15,
+    "question": "What is the default value of the position property?",
+    "options": ["relative", "fixed", "absolute", "static"],
+    "answer": "static",
+    "explanation": "HTML elements are positioned static by default; they are not affected by top, bottom, left, or right properties."
+  },
+  {
+    "id": 16,
+    "question": "Which property is used to center text?",
+    "options": ["text-align", "align-text", "center-text", "vertical-align"],
+    "answer": "text-align",
+    "explanation": "The text-align property is used to set the horizontal alignment of a text."
+  },
+  {
+    "id": 17,
+    "question": "How do you make a list that lists its items with squares?",
+    "options": ["list-type: square;", "list-style-type: square;", "type: square;", "list: square;"],
+    "answer": "list-style-type: square;",
+    "explanation": "The list-style-type property specifies the type of list-item marker."
+  },
+  {
+    "id": 18,
+    "question": "How do you group multiple selectors to apply the same style?",
+    "options": ["Separate them with a comma", "Separate them with a plus sign", "Separate them with a space", "Separate them with a dot"],
+    "answer": "Separate them with a comma",
+    "explanation": "Grouping selectors like 'h1, h2, p' helps minimize code."
+  },
+  {
+    "id": 19,
+    "question": "Which CSS property is used to specify whether an element's box should be floating?",
+    "options": ["align", "float", "clear", "position"],
+    "answer": "float",
+    "explanation": "The float property is used for positioning and layout on web pages."
+  },
+  {
+    "id": 20,
+    "question": "What is the z-index property used for?",
+    "options": ["To set the zoom level", "To specify the stack order of an element", "To set the transparency", "To change the font size"],
+    "answer": "To specify the stack order of an element",
+    "explanation": "The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, others)."
+  },
+  {
+    "id": 21,
+    "question": "Which property is used to set the maximum width of an element?",
+    "options": ["max-width", "width-max", "limit-width", "full-width"],
+    "answer": "max-width",
+    "explanation": "The max-width property is used to set the maximum width of an element."
+  },
+  {
+    "id": 22,
+    "question": "How do you make a border rounded?",
+    "options": ["border-round", "border-radius", "corner-radius", "radius-border"],
+    "answer": "border-radius",
+    "explanation": "The border-radius property is used to add rounded corners to an element."
+  },
+  {
+    "id": 23,
+    "question": "Which CSS property allows you to make a multi-column layout?",
+    "options": ["column-count", "layout-columns", "multi-column", "columns"],
+    "answer": "column-count",
+    "explanation": "The column-count property specifies the number of columns an element should be divided into."
+  },
+  {
+    "id": 24,
+    "question": "What is the purpose of Flexbox?",
+    "options": ["To make images flexible", "To provide a more efficient way to layout, align and distribute space among items in a container", "To create 3D animations", "To connect to databases"],
+    "answer": "To provide a more efficient way to layout, align and distribute space among items in a container",
+    "explanation": "The Flexible Box Layout Module makes it easier to design flexible responsive layout structure."
+  },
+  {
+    "id": 25,
+    "question": "Which property is used to align items in a Flexbox container along the main axis?",
+    "options": ["align-items", "justify-content", "align-content", "flex-align"],
+    "answer": "justify-content",
+    "explanation": "The justify-content property is used to align the flex items along the main axis (horizontally by default)."
+  },
+  {
+    "id": 26,
+    "question": "Which CSS property defines the space between cells in a grid?",
+    "options": ["grid-spacing", "grid-gap", "cell-padding", "grid-margin"],
+    "answer": "grid-gap",
+    "explanation": "The grid-gap (or gap) property defines the size of the gap between the rows and columns."
+  },
+  {
+    "id": 27,
+    "question": "How do you apply a style to an element when the mouse hovers over it?",
+    "options": [":active", ":focus", ":hover", ":visited"],
+    "answer": ":hover",
+    "explanation": "The :hover pseudo-class is used to select elements when you mouse over them."
+  },
+  {
+    "id": 28,
+    "question": "Which property is used to add a shadow to text?",
+    "options": ["box-shadow", "shadow-text", "text-shadow", "font-shadow"],
+    "answer": "text-shadow",
+    "explanation": "The text-shadow property adds shadow to text."
+  },
+  {
+    "id": 29,
+    "question": "What does 'box-sizing: border-box;' do?",
+    "options": ["Makes the box invisible", "Includes padding and border in the element's total width and height", "Removes the border", "Makes the border round"],
+    "answer": "Includes padding and border in the element's total width and height",
+    "explanation": "This ensures that the padding and border don't increase the final rendered width of an element."
+  },
+  {
+    "id": 30,
+    "question": "Which unit is relative to the font-size of the element?",
+    "options": ["px", "em", "rem", "vh"],
+    "answer": "em",
+    "explanation": "1em is equal to the current font size. If the font-size is 16px, then 1em is 16px."
+  },
+  {
+    "id": 31,
+    "question": "Which unit is relative to the font-size of the root element (html)?",
+    "options": ["em", "px", "rem", "pt"],
+    "answer": "rem",
+    "explanation": "rem stands for 'root em' and is always relative to the <html> element's font size."
+  },
+  {
+    "id": 32,
+    "question": "How do you make an element take up the full viewport height?",
+    "options": ["height: 100%;", "height: 100vh;", "height: 100vw;", "height: auto;"],
+    "answer": "height: 100vh;",
+    "explanation": "vh stands for viewport height. 100vh is equal to 100% of the viewport's height."
+  },
+  {
+    "id": 33,
+    "question": "Which CSS property is used to specify an image as the background of an element?",
+    "options": ["background-image", "image", "bg-image", "background-img"],
+    "answer": "background-image",
+    "explanation": "The background-image property sets one or more background images for an element."
+  },
+  {
+    "id": 34,
+    "question": "Which property is used to change the opacity of an element?",
+    "options": ["transparency", "opacity", "filter", "visibility"],
+    "answer": "opacity",
+    "explanation": "The opacity property sets the opacity level (transparency) for an element."
+  },
+  {
+    "id": 35,
+    "question": "What is the correct way to hide an element so it doesn't take up any space?",
+    "options": ["visibility: hidden;", "display: none;", "opacity: 0;", "hidden: true;"],
+    "answer": "display: none;",
+    "explanation": "display: none; removes the element from the layout, while visibility: hidden; hides it but keeps its space."
+  },
+  {
+    "id": 36,
+    "question": "Which selector is used to style the first child of an element?",
+    "options": [":first-child", ":first", ":only-child", ":child(1)"],
+    "answer": ":first-child",
+    "explanation": "The :first-child pseudo-class matches an element that is the first child of its parent."
+  },
+  {
+    "id": 37,
+    "question": "Which property allows you to wrap text within an element?",
+    "options": ["text-wrap", "word-wrap", "overflow-wrap", "Both word-wrap and overflow-wrap"],
+    "answer": "Both word-wrap and overflow-wrap",
+    "explanation": "These properties allow long words to be able to be broken and wrap onto the next line."
+  },
+  {
+    "id": 38,
+    "question": "How do you rotate an element 90 degrees?",
+    "options": ["transform: rotate(90deg);", "rotate: 90deg;", "turn: 90;", "shift: rotate(90);"],
+    "answer": "transform: rotate(90deg);",
+    "explanation": "The transform property applies a 2D or 3D transformation to an element."
+  },
+  {
+    "id": 39,
+    "question": "Which property defines the transition between two states of an element?",
+    "options": ["animation", "transform", "transition", "delay"],
+    "answer": "transition",
+    "explanation": "Transitions allow you to change property values smoothly, over a given duration."
+  },
+  {
+    "id": 40,
+    "question": "How do you specify a grid layout?",
+    "options": ["display: block;", "display: table;", "display: grid;", "display: flex;"],
+    "answer": "display: grid;",
+    "explanation": "Setting display to grid defines the element as a grid container."
+  },
+  {
+    "id": 41,
+    "question": "Which property is used to change the left margin of an element?",
+    "options": ["padding-left", "indent", "margin-left", "margin: left;"],
+    "answer": "margin-left",
+    "explanation": "The margin-left property sets the left margin of an element."
+  },
+  {
+    "id": 42,
+    "question": "In the Box Model, what is the correct order from inside to out?",
+    "options": ["Content, Margin, Border, Padding", "Content, Padding, Border, Margin", "Content, Border, Padding, Margin", "Padding, Content, Border, Margin"],
+    "answer": "Content, Padding, Border, Margin",
+    "explanation": "The CSS box model is essentially a box that wraps around every HTML element."
+  },
+  {
+    "id": 43,
+    "question": "Which property is used to change the list style to 'roman numerals'?",
+    "options": ["list-style-type: upper-roman;", "list-type: roman;", "roman-numerals: true;", "list-style: roman;"],
+    "answer": "list-style-type: upper-roman;",
+    "explanation": "The upper-roman value for list-style-type displays items as I, II, III, IV, etc."
+  },
+  {
+    "id": 44,
+    "question": "What does 'overflow: scroll;' do?",
+    "options": ["Hides the overflow", "Always shows scrollbars", "Only shows scrollbars if needed", "Deletes the content"],
+    "answer": "Always shows scrollbars",
+    "explanation": "The scroll value adds scrollbars even if the content fits inside the element."
+  },
+  {
+    "id": 45,
+    "question": "Which property is used to set the color of the border?",
+    "options": ["border-color", "border-style", "border-width", "color-border"],
+    "answer": "border-color",
+    "explanation": "The border-color property is used to set the color of the four borders."
+  },
+  {
+    "id": 46,
+    "question": "How do you make an element stay in the same position even when scrolling?",
+    "options": ["position: relative;", "position: static;", "position: fixed;", "position: absolute;"],
+    "answer": "position: fixed;",
+    "explanation": "An element with position: fixed; is positioned relative to the viewport."
+  },
+  {
+    "id": 47,
+    "question": "Which property is used to add a shadow to an element's box?",
+    "options": ["shadow-box", "box-shadow", "element-shadow", "border-shadow"],
+    "answer": "box-shadow",
+    "explanation": "The box-shadow property attaches one or more shadows to an element."
+  },
+  {
+    "id": 48,
+    "question": "What is a 'Media Query' used for?",
+    "options": ["To play videos", "To apply different styles for different devices/screen sizes", "To query the database", "To send emails"],
+    "answer": "To apply different styles for different devices/screen sizes",
+    "explanation": "Media queries are a key part of responsive web design."
+  },
+  {
+    "id": 49,
+    "question": "Which property sets the space between the rows of a grid?",
+    "options": ["row-gap", "column-gap", "grid-row-space", "row-spacing"],
+    "answer": "row-gap",
+    "explanation": "The row-gap property sets the size of the gap (gutter) between an element's grid rows."
+  },
+  {
+    "id": 50,
+    "question": "Which CSS property is used to specify the stack order of an element?",
+    "options": ["order", "z-index", "stack", "priority"],
+    "answer": "z-index",
+    "explanation": "z-index only works on positioned elements (absolute, relative, fixed, or sticky) and flex items."
+  }
+]

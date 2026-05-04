@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "question": "What type of database is MongoDB?",
+    "options": ["Relational", "Document-oriented", "Graph-based", "Key-value only"],
+    "answer": "Document-oriented",
+    "explanation": "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents."
+  },
+  {
+    "id": 2,
+    "question": "In MongoDB, what is a 'collection' equivalent to in a Relational Database?",
+    "options": ["Row", "Database", "Table", "Column"],
+    "answer": "Table",
+    "explanation": "A collection is a group of MongoDB documents, similar to how a table is a group of rows in RDBMS."
+  },
+  {
+    "id": 3,
+    "question": "What format does MongoDB use to store data internally?",
+    "options": ["JSON", "XML", "BSON", "CSV"],
+    "answer": "BSON",
+    "explanation": "BSON stands for Binary JSON. It is a binary-encoded serialization of JSON-like documents."
+  },
+  {
+    "id": 4,
+    "question": "Which command is used to see the list of all databases?",
+    "options": ["show dbs", "list databases", "view dbs", "get dbs"],
+    "answer": "show dbs",
+    "explanation": "The 'show dbs' command lists all the databases present on the MongoDB server."
+  },
+  {
+    "id": 5,
+    "question": "What is the primary key field in every MongoDB document?",
+    "options": ["_key", "id", "_id", "primary_id"],
+    "answer": "_id",
+    "explanation": "Every document must have a unique '_id' field that acts as the primary key."
+  },
+  {
+    "id": 6,
+    "question": "Which method is used to insert a single document into a collection?",
+    "options": ["db.collection.add()", "db.collection.insertOne()", "db.collection.put()", "db.collection.save()"],
+    "answer": "db.collection.insertOne()",
+    "explanation": "insertOne() is the modern method used to add exactly one document to a collection."
+  },
+  {
+    "id": 7,
+    "question": "How do you select all documents from a collection named 'users'?",
+    "options": ["db.users.get()", "db.users.all()", "db.users.find()", "db.users.select(*)"],
+    "answer": "db.users.find()",
+    "explanation": "The find() method with no arguments returns a cursor to all documents in the collection."
+  },
+  {
+    "id": 8,
+    "question": "Which operator is used for the 'greater than' condition in queries?",
+    "options": ["$gt", "$greater", "$gr", "$more"],
+    "answer": "$gt",
+    "explanation": "Comparison operators in MongoDB start with a dollar sign. $gt stands for 'Greater Than'."
+  },
+  {
+    "id": 9,
+    "question": "What does the 'upsert' option do in an update operation?",
+    "options": ["Updates all documents", "Inserts a document if no match is found", "Uploads and inserts", "Deletes then inserts"],
+    "answer": "Inserts a document if no match is found",
+    "explanation": "Upsert is a combination of Update and Insert."
+  },
+  {
+    "id": 10,
+    "question": "Which method is used to delete the first document that matches a filter?",
+    "options": ["db.collection.remove()", "db.collection.deleteOne()", "db.collection.dropOne()", "db.collection.discard()"],
+    "answer": "db.collection.deleteOne()",
+    "explanation": "deleteOne() removes at most one document that matches the specified filter."
+  },
+  {
+    "id": 11,
+    "question": "What is 'Sharding' in MongoDB?",
+    "options": ["A way to backup data", "Distributing data across multiple machines", "Encrypting data", "Indexing fields"],
+    "answer": "Distributing data across multiple machines",
+    "explanation": "Sharding is the process of storing data records across multiple machines to support very large data sets."
+  },
+  {
+    "id": 12,
+    "question": "What is a 'Replica Set'?",
+    "options": ["A set of queries", "A group of MongoDB instances that maintain the same data set", "A backup file", "A collection of unique IDs"],
+    "answer": "A group of MongoDB instances that maintain the same data set",
+    "explanation": "Replica sets provide redundancy and high availability by replicating data across multiple servers."
+  },
+  {
+    "id": 13,
+    "question": "Which operator is used to check if a value exists in an array?",
+    "options": ["$in", "$exists", "$contains", "$has"],
+    "answer": "$in",
+    "explanation": "The $in operator selects documents where the value of a field equals any value in the specified array."
+  },
+  {
+    "id": 14,
+    "question": "How do you limit the number of documents returned by a query to 5?",
+    "options": ["db.collection.find().limit(5)", "db.collection.find().max(5)", "db.collection.find().top(5)", "db.collection.find({limit: 5})"],
+    "answer": "db.collection.find().limit(5)",
+    "explanation": "The limit() method specifies the maximum number of documents the cursor will return."
+  },
+  {
+    "id": 15,
+    "question": "Which method is used to sort results in MongoDB?",
+    "options": ["order()", "arrange()", "sort()", "rank()"],
+    "answer": "sort()",
+    "explanation": "The sort() method takes a document containing field and value pairs (1 for ascending, -1 for descending)."
+  },
+  {
+    "id": 16,
+    "question": "What does the $set operator do during an update?",
+    "options": ["Creates a new collection", "Replaces the entire document", "Updates only the specified field values", "Resets the document"],
+    "answer": "Updates only the specified field values",
+    "explanation": "$set replaces the value of a field with the specified value without overwriting the whole document."
+  },
+  {
+    "id": 17,
+    "question": "Which command is used to remove an entire collection?",
+    "options": ["db.collection.remove()", "db.collection.drop()", "db.collection.delete()", "db.collection.clear()"],
+    "answer": "db.collection.drop()",
+    "explanation": "The drop() method removes the collection from the database and deletes all its indexes."
+  },
+  {
+    "id": 18,
+    "question": "What is 'Aggregation' in MongoDB?",
+    "options": ["Adding new fields", "Processing data records and returning computed results", "Merging two databases", "Creating a backup"],
+    "answer": "Processing data records and returning computed results",
+    "explanation": "Aggregation operations group values from multiple documents together to perform operations like count, sum, avg, etc."
+  },
+  {
+    "id": 19,
+    "question": "Which stage in an aggregation pipeline is used to filter documents?",
+    "options": ["$filter", "$find", "$match", "$where"],
+    "answer": "$match",
+    "explanation": "$match filters the documents to pass only the documents that match the specified condition(s) to the next pipeline stage."
+  },
+  {
+    "id": 20,
+    "question": "What is a 'GridFS' used for?",
+    "options": ["Storing small JSON files", "Storing and retrieving files that exceed the BSON document size limit (16MB)", "Creating a grid layout", "Indexing coordinates"],
+    "answer": "Storing and retrieving files that exceed the BSON document size limit (16MB)",
+    "explanation": "GridFS is a specification for storing and retrieving large files in MongoDB."
+  },
+  {
+    "id": 21,
+    "question": "Which command displays the execution plan of a query?",
+    "options": ["explain()", "plan()", "debug()", "trace()"],
+    "answer": "explain()",
+    "explanation": "The explain() method provides information on the query plan for find(), aggregate(), and other methods."
+  },
+  {
+    "id": 22,
+    "question": "How do you create an index on the 'name' field in ascending order?",
+    "options": ["db.collection.createIndex({name: 1})", "db.collection.index({name: 'asc'})", "db.collection.addIndex('name')", "db.collection.makeIndex({name: 1})"],
+    "answer": "db.collection.createIndex({name: 1})",
+    "explanation": "createIndex() is used to build indexes to improve query performance."
+  },
+  {
+    "id": 23,
+    "question": "What is the maximum size of a BSON document?",
+    "options": ["2MB", "8MB", "16MB", "No limit"],
+    "answer": "16MB",
+    "explanation": "To ensure single documents do not use excessive RAM or bandwidth, MongoDB limits BSON documents to 16MB."
+  },
+  {
+    "id": 24,
+    "question": "Which operator is used to perform a logical OR in a query?",
+    "options": ["$either", "$any", "$or", "$union"],
+    "answer": "$or",
+    "explanation": "$or performs a logical OR operation on an array of one or more expressions."
+  },
+  {
+    "id": 25,
+    "question": "How do you count the number of documents in a collection?",
+    "options": ["db.collection.size()", "db.collection.countDocuments()", "db.collection.length()", "db.collection.total()"],
+    "answer": "db.collection.countDocuments()",
+    "explanation": "countDocuments() returns the count of documents that match the query filter."
+  },
+  {
+    "id": 26,
+    "question": "What is an 'Embedded Document'?",
+    "options": ["A document stored on a different server", "A document inside another document", "A hidden file", "A document with no ID"],
+    "answer": "A document inside another document",
+    "explanation": "MongoDB allows nesting documents inside other documents to represent complex data relationships."
+  },
+  {
+    "id": 27,
+    "question": "Which aggregation stage is used to rename or add/remove fields?",
+    "options": ["$view", "$project", "$structure", "$map"],
+    "answer": "$project",
+    "explanation": "$project passes along the documents with the requested fields to the next stage in the pipeline."
+  },
+  {
+    "id": 28,
+    "question": "What does the '$push' operator do?",
+    "options": ["Adds a new field to a document", "Adds an item to an array", "Sends data to another database", "Increments a number"],
+    "answer": "Adds an item to an array",
+    "explanation": "$push appends a specified value to an array."
+  },
+  {
+    "id": 29,
+    "question": "Which command switch moves context to a specific database?",
+    "options": ["goto", "use", "cd", "db"],
+    "answer": "use",
+    "explanation": "The 'use <database_name>' command is used to switch between databases in the MongoDB shell."
+  },
+  {
+    "id": 30,
+    "question": "What is a 'TTL Index'?",
+    "options": ["An index for text", "A 'Time To Live' index that automatically removes documents after a certain time", "A very fast index", "A primary key index"],
+    "answer": "A 'Time To Live' index that automatically removes documents after a certain time",
+    "explanation": "TTL indexes are special single-field indexes that MongoDB uses to automatically remove documents from a collection after a certain amount of time."
+  },
+  {
+    "id": 31,
+    "question": "Which method returns a single document that matches the criteria?",
+    "options": ["findOne()", "findFirst()", "getOne()", "selectOne()"],
+    "answer": "findOne()",
+    "explanation": "findOne() returns the first document that satisfies the specified query criteria."
+  },
+  {
+    "id": 32,
+    "question": "What is the purpose of MongoDB Atlas?",
+    "options": ["A local GUI tool", "A fully managed cloud database service", "A documentation portal", "A migration tool"],
+    "answer": "A fully managed cloud database service",
+    "explanation": "Atlas is MongoDB's official Database-as-a-Service (DBaaS) platform."
+  },
+  {
+    "id": 33,
+    "question": "Which operator is used to increment a numeric field?",
+    "options": ["$add", "$plus", "$inc", "$sum"],
+    "answer": "$inc",
+    "explanation": "The $inc operator increments a field by a specified value."
+  },
+  {
+    "id": 34,
+    "question": "How do you skip the first 10 documents in a result set?",
+    "options": ["limit(-10)", "skip(10)", "offset(10)", "jump(10)"],
+    "answer": "skip(10)",
+    "explanation": "The skip() method tells MongoDB where to start returning results."
+  },
+  {
+    "id": 35,
+    "question": "What is a 'Capped Collection'?",
+    "options": ["A collection with a password", "A fixed-size collection that overwrites oldest entries when full", "A collection that cannot be deleted", "A collection for small data"],
+    "answer": "A fixed-size collection that overwrites oldest entries when full",
+    "explanation": "Capped collections are fixed-size collections that support high-throughput operations that insert and retrieve documents based on insertion order."
+  },
+  {
+    "id": 36,
+    "question": "Which operator checks if a field exists in a document?",
+    "options": ["$has", "$in", "$exists", "$is"],
+    "answer": "$exists",
+    "explanation": "$exists matches documents that contain or do not contain a specific field."
+  },
+  {
+    "id": 37,
+    "question": "What does the '$unwind' aggregation stage do?",
+    "options": ["Deletes the database", "Deconstructs an array field into multiple documents", "Sorts the documents", "Compresses the collection"],
+    "answer": "Deconstructs an array field into multiple documents",
+    "explanation": "$unwind creates a new document for every element in an array."
+  },
+  {
+    "id": 38,
+    "question": "How do you add multiple documents at once?",
+    "options": ["insert()", "insertMany()", "bulkInsert()", "addAll()"],
+    "answer": "insertMany()",
+    "explanation": "insertMany() takes an array of documents and inserts them into the collection in one operation."
+  },
+  {
+    "id": 39,
+    "question": "What is the default port for MongoDB?",
+    "options": ["8080", "3306", "27017", "5432"],
+    "answer": "27017",
+    "explanation": "By default, the MongoDB process (mongod) listens for connections on port 27017."
+  },
+  {
+    "id": 40,
+    "question": "Which stage in aggregation is used for grouping?",
+    "options": ["$collect", "$sum", "$group", "$aggregate"],
+    "answer": "$group",
+    "explanation": "The $group stage groups input documents by a specified identifier expression."
+  },
+  {
+    "id": 41,
+    "question": "What is the 'ObjectId' made of?",
+    "options": ["Random characters", "Timestamp, machine ID, process ID, and counter", "Just a number", "The document content"],
+    "answer": "Timestamp, machine ID, process ID, and counter",
+    "explanation": "ObjectId is a 12-byte identifier designed to be unique across a distributed system."
+  },
+  {
+    "id": 42,
+    "question": "Which method is used to remove all documents from a collection but keep the collection itself?",
+    "options": ["db.collection.drop()", "db.collection.deleteMany({})", "db.collection.clear()", "db.collection.truncate()"],
+    "answer": "db.collection.deleteMany({})",
+    "explanation": "Passing an empty filter to deleteMany() removes all documents while keeping the collection and its indexes."
+  },
+  {
+    "id": 43,
+    "question": "What is 'Polyglot Persistence'?",
+    "options": ["Using only one database", "Using different types of databases for different data needs in one application", "Learning many languages", "Translating database queries"],
+    "answer": "Using different types of databases for different data needs in one application",
+    "explanation": "In modern apps, you might use MongoDB for documents and Redis for caching simultaneously."
+  },
+  {
+    "id": 44,
+    "question": "Which operator is used to match documents with a specific value in an array?",
+    "options": ["$all", "$elemMatch", "$matchArray", "$array"],
+    "answer": "$elemMatch",
+    "explanation": "The $elemMatch operator matches documents that contain an array field with at least one element that matches all the specified query criteria."
+  },
+  {
+    "id": 45,
+    "question": "What does 'Journaling' do in MongoDB?",
+    "options": ["Logs user activity", "Helps the database recover in the event of a crash", "Saves code snippets", "Prints data to the console"],
+    "answer": "Helps the database recover in the event of a crash",
+    "explanation": "Journaling records all write operations to a log on disk so MongoDB can recover quickly after an unclean shutdown."
+  },
+  {
+    "id": 46,
+    "question": "Which method updates all documents that match a query?",
+    "options": ["update()", "updateMany()", "setAll()", "modifyAll()"],
+    "answer": "updateMany()",
+    "explanation": "updateMany() updates all documents in the collection that match the specified filter."
+  },
+  {
+    "id": 47,
+    "question": "How can you see current running operations in MongoDB?",
+    "options": ["db.currentOp()", "show operations", "list tasks", "db.status()"],
+    "answer": "db.currentOp()",
+    "explanation": "db.currentOp() reports in-progress operations for the MongoDB instance."
+  },
+  {
+    "id": 48,
+    "question": "What is a 'Compound Index'?",
+    "options": ["An index on a hidden field", "An index on multiple fields", "An encrypted index", "A temporary index"],
+    "answer": "An index on multiple fields",
+    "explanation": "Compound indexes support queries that match on multiple fields."
+  },
+  {
+    "id": 49,
+    "question": "Which command returns the statistics of a database?",
+    "options": ["db.stats()", "db.info()", "db.details()", "db.data()"],
+    "answer": "db.stats()",
+    "explanation": "db.stats() provides a summary of the storage use for the current database."
+  },
+  {
+    "id": 50,
+    "question": "What is 'Mongoose'?",
+    "options": ["A database engine", "An Object Data Modeling (ODM) library for MongoDB and Node.js", "A graphical interface", "A security patch"],
+    "answer": "An Object Data Modeling (ODM) library for MongoDB and Node.js",
+    "explanation": "Mongoose provides a schema-based solution to model your application data and includes built-in type casting and validation."
+  }
+]
