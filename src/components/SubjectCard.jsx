@@ -1,6 +1,7 @@
 import React from 'react'
-
-const SubjectCard = ({image,subject}) => {
+import { useNavigate } from 'react-router-dom'
+const SubjectCard = ({image,subject,path}) => {
+  const navigate = useNavigate()
   return (
     <>
           <div className='h-60 w-50 border-2 border-gray-600 rounded-xl flex justify-center gap-2 items-center flex-col gap-5  '>
@@ -13,6 +14,13 @@ const SubjectCard = ({image,subject}) => {
                     <h4>75% Compeleted</h4> */}
                     <button
                     className='px-15 py-2 rounded-xl bg-black text-white cursor-pointer '
+                    onClick={()=>{
+                      navigate('/testpage',{
+                        state : {
+                          path
+                        }
+                      })
+                    }}
                     >Start Quiz
                     </button>
           </div>

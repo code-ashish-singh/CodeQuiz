@@ -10,54 +10,59 @@ const Home = () => {
     "id": 1,
     "subject": "HTML",
     "description": "HyperText Markup Language - The standard markup language for creating web pages.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+    "json_path": "/JSON/Html.json"
   },
   {
     "id": 2,
     "subject": "CSS",
     "description": "Cascading Style Sheets - Used for describing the presentation of a document written in HTML.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+    "json_path": "/JSON/CSS.json"
   },
   {
     "id": 3,
     "subject": "JavaScript",
     "description": "A high-level, interpreted programming language that conforms to the ECMAScript specification.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
+    "json_path": "/JSON/JavaScript.json"
   },
   {
     "id": 4,
     "subject": "Java",
     "description": "A class-based, object-oriented programming language designed to have as few implementation dependencies as possible.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+    "json_path": "/JSON/Java.json"
   },
   {
     "id": 5,
     "subject": "Python",
     "description": "An interpreted, high-level and general-purpose programming language known for its readability.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+    "json_path": "/JSON/Python.json"
   },
   {
     "id": 6,
     "subject": "PHP",
     "description": "A popular general-purpose scripting language that is especially suited to web development.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+    "json_path": "/JSON/PHP.json"
   },
   {
     "id": 7,
     "subject": "SQL",
     "description": "Structured Query Language - Used for managing data held in a relational database management system.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+    "json_path": "/JSON/SQL.json"
   },
   {
     "id": 8,
     "subject": "MongoDB",
     "description": "A source-available cross-platform document-oriented database program.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg",
+    "json_path": "/JSON/MongoDB.json"
   }
-
-
-]
-
+];
 
 
 
@@ -100,7 +105,7 @@ const Home = () => {
               
                 <div className='w-full min-h-[50vh] flex justify-center items-center flex-wrap gap-10 pt-10 '>
                      {subjectCardInfo.map((item)=>{
-                return    <SubjectCard image={item.image_url} subject={item.subject} />
+                return    <SubjectCard image={item.image_url} subject={item.subject} path={item.json_path} />
                })}
                 </div>
               
