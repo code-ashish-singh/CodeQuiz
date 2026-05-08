@@ -4,7 +4,6 @@ import SubjectCard from '../components/SubjectCard'
 
 const Home = () => {
   const [islogIn,setLogIn] = useState(false)
-
   const subjectCardInfo = [
   {
     "id": 1,

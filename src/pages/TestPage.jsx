@@ -22,7 +22,7 @@ const TestPage = () => {
   return (
     <>
          <NavBar/>
-          <div className='w-full min-h-screen  px-80 flex flex-col gap-10 py-30'>
+          <div className='w-full min-h-screen  px-10 md:px-80 flex flex-col gap-10 py-30'>
                 {apidata ? 
                 <div>
                    <h1>Question {apidata[count].id}.    {apidata[count].question}</h1>
@@ -31,13 +31,13 @@ const TestPage = () => {
             <div>  <input type="radio"  id={`ques${apidata[count].options[1]}`}   name={`ques${apidata[count].id}`} value='a' />   <label for={`ques${apidata[count].options[1]}`} >    {apidata[count].options[1]} </label> </div>
               <div>  <input type="radio"  id={`ques${apidata[count].options[2]}`}   name={`ques${apidata[count].id}`} value='a' />   <label for={`ques${apidata[count].options[2]}`} >   {apidata[count].options[2]} </label> </div>
                <div>  <input type="radio"  id={`ques${apidata[count].options[3]}`}   name={`ques${apidata[count].id}`} value='a' />  <label for={`ques${apidata[count].options[3]}`} >   {apidata[count].options[3]} </label> </div>
-               <div className='mt-3 flex justify-start gap-20 px-30 '>
+               <div className='mt-3 flex justify-start gap-20 md:px-30 '>
                   <button className='px-3 py-1 bg-green-700 text-white uppercase rounded ' onClick={()=>{
                     if(count<=0){
                       return toast('go forword')
                     }
                     setCount(count-1)
-                  toast('go forword')
+                 
                   }} >Prev</button>
                   <button className='px-3 py-1 bg-green-700 text-white uppercase rounded ' onClick={()=>{
                     if(count>49){
