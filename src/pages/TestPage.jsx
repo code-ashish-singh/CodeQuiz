@@ -1,6 +1,6 @@
 import React, { act ,useRef } from 'react'
 import NavBar from '../components/NavBar'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,11 +16,11 @@ const TestPage = () => {
   const [apidata , setApiData]  = useState()
   const { path } = location.state || {}
   // const [ result , setResult] = useState([])
+  const navigate = useNavigate()
+    const [result , setResult] = useState(false)
 
 
-
-
-  const [right,setRight] = useState(1)
+  const [right,setRight] = useState(0)
   const [curVal,setCurVal] = useState(null)
   const handleChange = (e)=>{
      const {name,value} = e.target
@@ -50,22 +50,33 @@ const TestPage = () => {
       setRight(right+1)
     }
    console.log(right)
-    
+    setResult(false)
         
    }
 
+   const  checkUserLogin = ()=>{
+    const userLogin = JSON.parse(localStorage.getItem('user'))
+    if(!userLogin || !userLogin.islogin){
+      return navigate('/login')
+    }
+   }
+
    useEffect(()=>{
+     checkUserLogin()
       fetchData()
    },[])
 
     const [visible, setVisible] = useState(false);
     const toast = useRef(null);
    const accept = () => {
+
         toast.current.show({ severity: 'info', summary: 'Confirmed', detail: 'You have Submit', life: 3000 });
+        setResult(true)
     }
 
     const reject = () => {
         toast.current.show({ severity: 'warn', summary: 'Rejected', detail: 'Cancel', life: 3000 });
+        
     }
 
 
@@ -186,7 +197,12 @@ const TestPage = () => {
                 </div>
                 
             : <h2>no data yet</h2>}
+            {
+              result ? `Result is 
+           ${right} out of 50` : ""
+            }
             <ToastContainer />
+            
           </div>
     </>
   )
