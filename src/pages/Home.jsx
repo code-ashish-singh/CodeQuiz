@@ -1,116 +1,76 @@
-import React, { useEffect, useState } from 'react'
-import NavBar from '../components/NavBar'
-import SubjectCard from '../components/SubjectCard'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import PageFrame from "../components/PageFrame";
+import Card from "../components/Card";
+import DashboardHeader from "../components/DashboardHeader";
+import SubjectCard from "../components/SubjectCard";
+import Button from "../components/Button";
+import useAuthUser from "../hooks/useAuthUser";
+import { SUBJECTS } from "../data/subjects";
 
 const Home = () => {
-  const [islogIn,setLogIn] = useState(false)
-  const subjectCardInfo = [
-  {
-    "id": 1,
-    "subject": "HTML",
-    "description": "HyperText Markup Language - The standard markup language for creating web pages.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-    "json_path": "/JSON/Html.json"
-  },
-  {
-    "id": 2,
-    "subject": "CSS",
-    "description": "Cascading Style Sheets - Used for describing the presentation of a document written in HTML.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-    "json_path": "/JSON/CSS.json"
-  },
-  {
-    "id": 3,
-    "subject": "JavaScript",
-    "description": "A high-level, interpreted programming language that conforms to the ECMAScript specification.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
-    "json_path": "/JSON/JavaScript.json"
-  },
-  {
-    "id": 4,
-    "subject": "Java",
-    "description": "A class-based, object-oriented programming language designed to have as few implementation dependencies as possible.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
-    "json_path": "/JSON/Java.json"
-  },
-  {
-    "id": 5,
-    "subject": "Python",
-    "description": "An interpreted, high-level and general-purpose programming language known for its readability.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-    "json_path": "/JSON/Python.json"
-  },
-  {
-    "id": 6,
-    "subject": "PHP",
-    "description": "A popular general-purpose scripting language that is especially suited to web development.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
-    "json_path": "/JSON/PHP.json"
-  },
-  {
-    "id": 7,
-    "subject": "SQL",
-    "description": "Structured Query Language - Used for managing data held in a relational database management system.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
-    "json_path": "/JSON/SQL.json"
-  },
-  {
-    "id": 8,
-    "subject": "MongoDB",
-    "description": "A source-available cross-platform document-oriented database program.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg",
-    "json_path": "/JSON/MongoDB.json"
-  }
-];
+  const navigate = useNavigate();
+  const { isLoggedIn } = useAuthUser();
+  const [selectedId, setSelectedId] = useState(null);
 
+  const selectedSubject = SUBJECTS.find((s) => s.id === selectedId);
 
-
+  const handleStartQuiz = () => {
+    if (!selectedSubject) {
+      toast.error("Pick a category first.");
+      return;
+    }
+    if (!isLoggedIn) {
+      toast.info("Please log in to start a quiz.");
+      navigate("/login");
+      return;
+    }
+    navigate("/testpage", {
+      state: {
+        path: selectedSubject.jsonPath,
+        subject: selectedSubject.subject,
+        color: selectedSubject.color,
+      },
+    });
+  };
 
   return (
-    <>
-       <NavBar/>
-      {
-        islogIn ?   <div className='w-full h-80 flex justify-center items-center'>
-          
-            <div className='h-[90%] w-[90%] bg-[#E8E8FE] border-2 border-blue-200 rounded-xl
-                    flex justify-center items-center
-               '>
-                        <div className='w-[50%] h-[100%] flex justify-center items-start gap-3 flex-col'>
-                            <h1 className='text-[#1A1340] font-semibold text-3xl'>WelCome Back,   UserName!</h1>
-                            <p>Continue your learning journey. You've completed 3 <br /> quizzes this week — keep up the streak!</p>
-                        </div>
-                        <div className='flex justify-center items-center gap-10'>
-                              <span>
-                                  <p>87%</p>
-                                  <p>Avg Score</p>
-                              </span>
-                              <span>
-                                  <p>24</p>
-                                  <p>Quizes Done</p>
-                              </span>
-                              <span>
-                                  <p>7</p>
-                                  <p>Subjects</p>
-                              </span>
-                        </div>
-               </div> 
-           
-       </div>   : ''
-      }
+    <PageFrame>
+      <Card>
+        <DashboardHeader />
 
-       <div className='p-5'>
-               <h1 className='text-black font-semibold text-xl'>Choose A Subject</h1>
-               {}
-              
-                <div className='w-full min-h-[50vh] flex justify-center items-center flex-wrap gap-10 pt-10 '>
-                     {subjectCardInfo.map((item)=>{
-                return    <SubjectCard image={item.image_url} subject={item.subject} path={item.json_path} />
-               })}
-                </div>
-              
-       </div>
-    </>
-  )
-}
+        <div className="flex flex-1 flex-col items-center justify-center px-6 py-10 sm:px-10">
+          <p
+            className="mx-auto max-w-xl text-center text-sm sm:text-base"
+            style={{ color: "var(--color-ink-700)" }}
+          >
+            Choose one from categories below &amp; see how many questions you can answer
+            correctly!
+          </p>
 
-export default Home
+          <div className="mx-auto mt-8 grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {SUBJECTS.map((item) => (
+              <SubjectCard
+                key={item.id}
+                subject={item.subject}
+                tagline={item.tagline}
+                color={item.color}
+                selected={item.id === selectedId}
+                onSelect={() => setSelectedId(item.id)}
+              />
+            ))}
+          </div>
+
+          <div className="mt-10 flex justify-center ">
+            <Button size="lg" onClick={handleStartQuiz} disabled={!selectedSubject} className="!bg-[#3a3fd4] !shadow-[0_8px_32px_-4px_rgba(58,63,212,0.85)] hover:!bg-[#2c31b8] hover:!shadow-[0_12px_36px_-4px_rgba(58,63,212,1)] disabled:!opacity-30">
+              Start Quiz
+            </Button>
+          </div>
+        </div>
+      </Card>
+    </PageFrame>
+  );
+};
+
+export default Home;

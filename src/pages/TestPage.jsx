@@ -1,211 +1,192 @@
-import React, { act ,useRef } from 'react'
-import NavBar from '../components/NavBar'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
-import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
-
-
-import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
-import { Toast } from 'primereact/toast';
-import { Button } from 'primereact/button';
+import React, { useCallback, useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import PageFrame from "../components/PageFrame";
+import Card from "../components/Card";
+import DashboardHeader from "../components/DashboardHeader";
+import OptionCard from "../components/OptionCard";
+import ProgressBadge from "../components/ProgressBadge";
+import Button from "../components/Button";
+import CelebrationIllustration from "../illustrations/CelebrationIllustration";
+import useAuthUser from "../hooks/useAuthUser";
+import { pickQuestions, scoreAnswers } from "../utils/quiz";
 
 const TestPage = () => {
-  const [count ,setCount] = useState(0)
-  const location = useLocation()
-  const [apidata , setApiData]  = useState()
-  const { path } = location.state || {}
-  // const [ result , setResult] = useState([])
-  const navigate = useNavigate()
-    const [result , setResult] = useState(false)
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { isLoggedIn } = useAuthUser();
+  const { path, subject } = location.state || {};
 
+  const [questions, setQuestions] = useState(null);
+  const [error, setError] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [view, setView] = useState("quiz"); // 'quiz' | 'result'
 
-  const [right,setRight] = useState(0)
-  const [curVal,setCurVal] = useState(null)
-  const handleChange = (e)=>{
-     const {name,value} = e.target
-     setCurVal(value)
-      
-  }
-   const fetchData = async ()=>{
-       const res = await fetch(path)
-       const data = await res.json()
-        setApiData(data)
-       console.log(data)
-   }
-   const checkResult = (curVal,actVal)=>{
-    console.log(curVal,actVal)
-    // if(curVal === actVal){
-    //   // result.push(true)
-    //   console.log(true)
-    //   let add = [...result , true]
-    //   setResult(add)
-    //   setCurVal(null)
-    // }
-    // else{
-    //   setResult(result.push(false))
-    //   setCurVal(null)
-    // }
-    if(curVal === actVal){
-      setRight(right+1)
+  const loadQuestions = useCallback(async () => {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error("Couldn't load questions for this category.");
+      const bank = await res.json();
+      const shuffled = pickQuestions(bank);
+      setQuestions(shuffled);
+      setAnswers(Array(shuffled.length).fill(null));
+      setCurrentIndex(0);
+      setView("quiz");
+    } catch (err) {
+      setError(err.message || "Something went wrong loading this quiz.");
     }
-   console.log(right)
-    setResult(false)
-        
-   }
+  }, [path]);
 
-   const  checkUserLogin = ()=>{
-    const userLogin = JSON.parse(localStorage.getItem('user'))
-    if(!userLogin || !userLogin.islogin){
-      return navigate('/login')
+  useEffect(() => {
+    if (!isLoggedIn) {
+      toast.info("Please log in to take a quiz.");
+      navigate("/login");
+      return;
     }
-   }
-
-   useEffect(()=>{
-     checkUserLogin()
-      fetchData()
-   },[])
-
-    const [visible, setVisible] = useState(false);
-    const toast = useRef(null);
-   const accept = () => {
-
-        toast.current.show({ severity: 'info', summary: 'Confirmed', detail: 'You have Submit', life: 3000 });
-        setResult(true)
+    if (!path) {
+      toast.error("Pick a category from the home page first.");
+      navigate("/");
+      return;
     }
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- async data fetch, not a synchronous render-phase update
+    loadQuestions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    const reject = () => {
-        toast.current.show({ severity: 'warn', summary: 'Rejected', detail: 'Cancel', life: 3000 });
-        
+  const handleSelectOption = (option) => {
+    setAnswers((prev) => {
+      const next = [...prev];
+      next[currentIndex] = option;
+      return next;
+    });
+  };
+
+  const isLastQuestion = questions && currentIndex === questions.length - 1;
+
+  const handleNext = () => {
+    if (answers[currentIndex] == null) {
+      toast.error("Select an answer to continue.");
+      return;
     }
+    if (isLastQuestion) {
+      setView("result");
+    } else {
+      setCurrentIndex((i) => i + 1);
+    }
+  };
 
+  const handlePlayAgain = () => {
+    loadQuestions();
+  };
 
-
-
-
-   
-  return (
-    <>
-         <NavBar/>
-
-          <Toast ref={toast} />
-            <ConfirmDialog
-                group="declarative"
-                visible={visible}
-                onHide={() => setVisible(false)}
-                message="Are you sure you want to Submit Test?"
-                header="Confirmation"
-                icon="pi pi-exclamation-triangle"
-                accept={accept}
-                reject={reject}
-                style={{ width: '50vw' }}
-                breakpoints={{ '1100px': '75vw', '960px': '100vw' }}
-            />
-
-
-
-          <div className='w-full min-h-screen  px-10 md:px-80 flex flex-col gap-10 py-30'>
-                {apidata ? 
-                <div>
-                   <h1>Question {apidata[count].id}.    {apidata[count].question}</h1>
-                   
-              <div> 
-                 <input
-                  type="radio" 
-                  id={`ques${apidata[count].options[0]}`} 
-                  name={`ques${apidata[count].id}`} 
-                  value={`${apidata[count].options[0]}`}
-                  onChange={handleChange}
-                  /> 
-                  <label 
-                  htmlFor={`ques${apidata[count].options[0]}`} >
-                     {apidata[count].options[0]}
-                     </label>
-               </div>
-            <div>
-                <input 
-                type="radio"  
-                id={`ques${apidata[count].options[1]}`}   
-                name={`ques${apidata[count].id}`} 
-                value={`${apidata[count].options[1]}`} 
-                onChange={handleChange}
-                />  
-                 <label 
-                 htmlFor={`ques${apidata[count].options[1]}`} > 
-                 {apidata[count].options[1]} 
-                 </label> 
-              </div>
-              <div> 
-                 <input 
-                 type="radio"  
-                 id={`ques${apidata[count].options[2]}`}   
-                 name={`ques${apidata[count].id}`} 
-                 value={`${apidata[count].options[2]}`}
-                 onChange={handleChange}
-                  /> 
-                  <label 
-                  htmlFor={`ques${apidata[count].options[2]}`} >
-                    {apidata[count].options[2]} 
-                  </label>
-               </div>
-               <div> 
-                 <input 
-                 type="radio"  
-                 id={`ques${apidata[count].options[3]}`}   
-                 name={`ques${apidata[count].id}`} 
-                 value={`${apidata[count].options[3]}`}
-                 onChange={handleChange} 
-                 /> 
-               <label 
-               htmlFor={`ques${apidata[count].options[3]}`} >   
-               {apidata[count].options[3]} 
-               </label> 
-                 </div>
-               <div className='mt-3 flex justify-start gap-20 md:px-30 '>
-                 {apidata[count].id== 50 ? <button 
-                 onClick={()=>{
-                  setVisible(true)
-                  
-                 }}
-                 className='w-full bg-red-700 py-2 rounded text-white font-semibold text-lg '>
-                  Submit</button>  
-                   : <> 
-                   <button 
-                  className='px-3 py-1 bg-green-700 text-white uppercase rounded ' 
-                  onClick={()=>{
-                    if(count<=0){
-                     
-                      return toast('go forword')
-                    }
-                     checkResult(curVal,apidata[count].answer)
-                    setCount(count-1)
-                 
-                  }} >
-                    Prev</button>
-                  <button 
-                  className='px-3 py-1 bg-green-700 text-white uppercase rounded ' 
-                  onClick={()=>{
-                    if(count>49){
-                     
-                      return toast('finished')
-                    }
-                     checkResult(curVal,apidata[count].answer)
-                    setCount(count+1)
-                    }} >
-                    Next</button></>}
-               </div>
-                </div>
-                
-            : <h2>no data yet</h2>}
-            {
-              result ? `Result is 
-           ${right} out of 50` : ""
-            }
-            <ToastContainer />
-            
+  if (error) {
+    return (
+      <PageFrame>
+        <Card>
+          <DashboardHeader />
+          <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-10 text-center">
+            <p style={{ color: "var(--color-ink-700)" }}>{error}</p>
+            <Button onClick={() => navigate("/")}>Back to Home</Button>
           </div>
-    </>
-  )
-}
+        </Card>
+      </PageFrame>
+    );
+  }
 
-export default TestPage
+  if (!questions) {
+    return (
+      <PageFrame>
+        <Card>
+          <DashboardHeader />
+          <div className="flex flex-1 items-center justify-center px-6 py-10">
+            <p style={{ color: "var(--color-ink-300)" }}>Loading questions…</p>
+          </div>
+        </Card>
+      </PageFrame>
+    );
+  }
+
+  if (view === "result") {
+    const score = scoreAnswers(questions, answers);
+    return (
+      <PageFrame>
+        <Card>
+          <DashboardHeader />
+          <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-10 text-center sm:px-10">
+            <h1 className="font-display text-3xl font-bold" style={{ color: "var(--color-brand-500)" }}>
+              Congratulation
+            </h1>
+            <p className="text-sm" style={{ color: "var(--color-ink-300)" }}>
+              Category : {subject}
+            </p>
+
+            <CelebrationIllustration className="w-full max-w-sm" />
+
+            <p className="text-sm" style={{ color: "var(--color-ink-700)" }}>
+              You answered
+            </p>
+            <p className="font-display text-3xl font-bold" style={{ color: "var(--color-brand-500)" }}>
+              {score} / {questions.length}
+            </p>
+            <p className="text-sm" style={{ color: "var(--color-ink-700)" }}>
+              question correct
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+              <Button onClick={handlePlayAgain}>Play Again</Button>
+              <Button variant="outline" onClick={() => navigate("/")}>
+                Back to Home
+              </Button>
+            </div>
+          </div>
+        </Card>
+      </PageFrame>
+    );
+  }
+
+  const question = questions[currentIndex];
+
+  return (
+    <PageFrame>
+      <Card>
+        <DashboardHeader />
+        <div className="flex flex-1 flex-col items-center justify-center gap-5 px-6 py-10 text-center sm:px-10">
+          <div className="flex items-center gap-3 text-sm" style={{ color: "var(--color-ink-300)" }}>
+            <span>Category : {subject}</span>
+            <span aria-hidden="true">·</span>
+            <button
+              type="button"
+              onClick={() => navigate("/")}
+              className="cursor-pointer font-medium hover:underline"
+              style={{ color: "var(--color-brand-500)" }}
+            >
+              Quit quiz
+            </button>
+          </div>
+          <ProgressBadge current={currentIndex + 1} total={questions.length} />
+          <h2 className="max-w-lg text-base font-semibold sm:text-lg" style={{ color: "var(--color-ink-900)" }}>
+            {question.question}
+          </h2>
+
+          <div className="grid w-full max-w-2xl grid-cols-1 gap-3 text-left sm:grid-cols-2">
+            {question.options.map((option) => (
+              <OptionCard
+                key={option}
+                label={option}
+                selected={answers[currentIndex] === option}
+                onSelect={() => handleSelectOption(option)}
+              />
+            ))}
+          </div>
+
+          <Button size="lg" className="mt-2" onClick={handleNext}>
+            {isLastQuestion ? "Finish Quiz" : "Next Question"}
+          </Button>
+        </div>
+      </Card>
+    </PageFrame>
+  );
+};
+
+export default TestPage;

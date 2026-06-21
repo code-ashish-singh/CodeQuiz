@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Brand / primary indigo (page background + primary actions) */
+  --color-brand-50: #f1f1fe;
+  --color-brand-100: #e4e4fc;
+  --color-brand-200: #c7c8f8;
+  --color-brand-300: #a6a8f5;
+  --color-brand-400: #8d90f2;
+  --color-brand-500: #7c83f1;
+  --color-brand-600: #6266d8;
+  --color-brand-700: #4d50b3;
+
+  /* Ink (headings / body text) */
+  --color-ink-900: #1a1340;
+  --color-ink-700: #312a55;
+  --color-ink-500: #635e7d;
+  --color-ink-300: #9b97b3;
+  --color-ink-200: #c8c5db;
+
+  /* Surface */
+  --color-surface-panel: #f5f5fc;
+  --color-surface-border: #e7e6f3;
+
+  /* Category accents */
+  --color-cat-design: #8641fe;
+  --color-cat-motion: #14b6ff;
+  --color-cat-dev: #ec407a;
+  --color-cat-ux: #ff6332;
+  --color-cat-seo: #4aaf47;
+
+  --shadow-card: 0 30px 60px -15px rgba(26, 19, 64, 0.35);
+  --shadow-soft: 0 12px 30px -10px rgba(26, 19, 64, 0.18);
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-brand-500);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar so it doesn't fight the brand palette */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-300);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

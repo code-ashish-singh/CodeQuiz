@@ -1,94 +1,94 @@
-import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import PageFrame from "../components/PageFrame";
+import AuthCard from "../components/AuthCard";
+import FormField from "../components/FormField";
+import Button from "../components/Button";
+import { getStoredUser, loginUser } from "../utils/authStorage";
 
 const LogIn = () => {
-  const [loginData,setLoginData] = useState({
-    email : "",
-    password : ""
-  })
-  const navigate = useNavigate('')
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(loginData)
-  
-    const userData = JSON.parse(localStorage.getItem('user'))
-    console.log(userData)
-    if(loginData.email != userData.email || loginData.password != userData.password){
-      return alert('please Enter valid email or password')
+
+    if (!getStoredUser()) {
+      toast.error("No account found yet. Please sign up first.");
+      navigate("/signin");
+      return;
     }
 
-    userData.islogin  = true
-    localStorage.setItem('user',JSON.stringify(userData))
-    alert('Login successful')
-    navigate('/')
+    setSubmitting(true);
+    try {
+      loginUser(formData);
+      toast.success("Login successful — let's quiz!");
+      navigate("/");
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
-  };
-  const handleChange = (e) => {
-    const {name,value} =  e.target
-    setLoginData({...loginData,[name]:value})
-  };
-  useEffect(()=>{
-     if(!localStorage.getItem('user')){
-      navigate('/signin')
-     }
-  },[])
   return (
-    <>
-      <>
-        <NavBar />
-        <div className="h-[90vh] w-full flex justify-center items-center flex-col   ">
-          <form
-            className="border-2 border-gray-500 rounded-2xl px-10 py-20 text-center gap-5 flex flex-col "
-            onSubmit={handleSubmit}
-            action=""
-          >
-            <div className="w-full flex justify-between items-center">
-              <label className="px-3 p-1 font-semibold text-lg" htmlFor="email">
-                Enter Email
-              </label>
-              <input
-                className="border-2 border-gray-800 rounded-md px-3 py-1 font-semibold "
-                type="email"
-                id="email"
-                name="email"
-                value={loginData.email}
-                onChange={handleChange}
-                placeholder="Enter Your email"
-               required
-              />
-            </div>
-            <div className="w-full flex justify-between items-center">
-              <label
-                className="px-3 p-1 font-semibold text-lg"
-                htmlFor="password"
-              >
-                Enter Pasword
-              </label>
-              <input
-                className="border-2 border-gray-800 rounded-md px-3 py-1 font-semibold "
-                type="password"
-                id="password"
-                name="password"
-                value={loginData.password}
-                onChange={handleChange}
-                placeholder="Enter Your password"
-                required
-              />
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <button
-                className="w-full bg-green-700 py-2 font-semibold text-white rounded-md"
-                type="submit"
-              >
-                LogIn
-              </button>
-            </div>
-          </form>
+    <PageFrame>
+      <AuthCard switchPrompt="Create an account" switchLabel="Sign Up" switchTo="/signin">
+        <div>
+          <h1 className="font-display text-2xl font-bold" style={{ color: "var(--color-ink-900)" }}>
+            Welcome to CodeQuiz
+          </h1>
+          <p className="mt-1 text-sm" style={{ color: "var(--color-ink-300)" }}>
+            Login &amp; start playing
+          </p>
         </div>
-      </>
-    </>
+
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
+          <FormField
+            label="Enter Email"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            value={formData.email}
+            onChange={handleChange}
+            autoComplete="email"
+            required
+          />
+
+          <div>
+            <FormField
+              label="Enter Password"
+              type="password"
+              name="password"
+              placeholder="Your password"
+              value={formData.password}
+              onChange={handleChange}
+              autoComplete="current-password"
+              required
+            />
+            <button
+              type="button"
+              onClick={() => toast.info("Password reset isn't available in this demo yet.")}
+              className="mt-1.5 cursor-pointer text-xs font-medium hover:underline"
+              style={{ color: "var(--color-ink-300)" }}
+            >
+              Forgot password?
+            </button>
+          </div>
+
+          <Button type="submit" size="lg" className="mt-2 w-full" disabled={submitting}>
+            Login
+          </Button>
+        </form>
+      </AuthCard>
+    </PageFrame>
   );
 };
 
